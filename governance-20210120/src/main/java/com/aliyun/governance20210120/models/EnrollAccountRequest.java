@@ -111,6 +111,9 @@ public class EnrollAccountRequest extends TeaModel {
     @NameInMap("ResellAccountType")
     public String resellAccountType;
 
+    @NameInMap("Tag")
+    public java.util.List<EnrollAccountRequestTag> tag;
+
     public static EnrollAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         EnrollAccountRequest self = new EnrollAccountRequest();
         return TeaModel.build(map, self);
@@ -186,6 +189,14 @@ public class EnrollAccountRequest extends TeaModel {
     }
     public String getResellAccountType() {
         return this.resellAccountType;
+    }
+
+    public EnrollAccountRequest setTag(java.util.List<EnrollAccountRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<EnrollAccountRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class EnrollAccountRequestBaselineItems extends TeaModel {
@@ -264,6 +275,36 @@ public class EnrollAccountRequest extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+    }
+
+    public static class EnrollAccountRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static EnrollAccountRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            EnrollAccountRequestTag self = new EnrollAccountRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public EnrollAccountRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public EnrollAccountRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
