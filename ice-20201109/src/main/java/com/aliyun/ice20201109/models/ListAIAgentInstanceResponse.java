@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.emr20210320.models;
+package com.aliyun.ice20201109.models;
 
 import com.aliyun.tea.*;
 
-public class ListInspectionHistoryResponse extends TeaModel {
+public class ListAIAgentInstanceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListInspectionHistoryResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListInspectionHistoryResponseBody body;
+    public ListAIAgentInstanceResponseBody body;
 
-    public static ListInspectionHistoryResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListInspectionHistoryResponse self = new ListInspectionHistoryResponse();
+    public static ListAIAgentInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAIAgentInstanceResponse self = new ListAIAgentInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListInspectionHistoryResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListAIAgentInstanceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListInspectionHistoryResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListInspectionHistoryResponse setStatusCode(Integer statusCode) {
+    public ListAIAgentInstanceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListInspectionHistoryResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListInspectionHistoryResponse setBody(ListInspectionHistoryResponseBody body) {
+    public ListAIAgentInstanceResponse setBody(ListAIAgentInstanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListInspectionHistoryResponseBody getBody() {
+    public ListAIAgentInstanceResponseBody getBody() {
         return this.body;
     }
 

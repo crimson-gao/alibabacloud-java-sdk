@@ -15,7 +15,7 @@ public class GetClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the region in which you want to create the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

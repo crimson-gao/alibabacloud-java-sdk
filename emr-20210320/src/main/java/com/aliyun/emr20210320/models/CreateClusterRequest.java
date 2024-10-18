@@ -74,6 +74,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("DeployMode")
     public String deployMode;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>The attributes of all ECS instances.</p>
      * <p>This parameter is required.</p>
@@ -221,6 +224,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getDeployMode() {
         return this.deployMode;
+    }
+
+    public CreateClusterRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateClusterRequest setNodeAttributes(NodeAttributes nodeAttributes) {

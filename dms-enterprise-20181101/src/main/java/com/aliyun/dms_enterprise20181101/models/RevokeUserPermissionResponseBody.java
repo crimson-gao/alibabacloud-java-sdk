@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeUserPermissionResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code that is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>MissingUserId</p>
@@ -14,7 +14,7 @@ public class RevokeUserPermissionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message that is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>UserId is mandatory for this action.</p>
@@ -23,7 +23,7 @@ public class RevokeUserPermissionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A99CD576-1E18-4E86-931E-C3CCE56D****</p>
@@ -34,8 +34,8 @@ public class RevokeUserPermissionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
