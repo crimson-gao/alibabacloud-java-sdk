@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachSharedStoragesResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
@@ -12,6 +14,8 @@ public class AttachSharedStoragesResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F9B7BEF8-E42E-5090-9880-55FB7872****</p>
      */
@@ -19,6 +23,12 @@ public class AttachSharedStoragesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -50,6 +50,9 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    @NameInMap("DBProxyNodes")
+    public java.util.List<ModifyDBProxyInstanceRequestDBProxyNodes> DBProxyNodes;
+
     /**
      * <p>The point in time that you want to specify. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <blockquote>
@@ -76,6 +79,9 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
+
+    @NameInMap("MigrateAZ")
+    public java.util.List<ModifyDBProxyInstanceRequestMigrateAZ> migrateAZ;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -144,6 +150,14 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         return this.DBProxyInstanceType;
     }
 
+    public ModifyDBProxyInstanceRequest setDBProxyNodes(java.util.List<ModifyDBProxyInstanceRequestDBProxyNodes> DBProxyNodes) {
+        this.DBProxyNodes = DBProxyNodes;
+        return this;
+    }
+    public java.util.List<ModifyDBProxyInstanceRequestDBProxyNodes> getDBProxyNodes() {
+        return this.DBProxyNodes;
+    }
+
     public ModifyDBProxyInstanceRequest setEffectiveSpecificTime(String effectiveSpecificTime) {
         this.effectiveSpecificTime = effectiveSpecificTime;
         return this;
@@ -158,6 +172,14 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     }
     public String getEffectiveTime() {
         return this.effectiveTime;
+    }
+
+    public ModifyDBProxyInstanceRequest setMigrateAZ(java.util.List<ModifyDBProxyInstanceRequestMigrateAZ> migrateAZ) {
+        this.migrateAZ = migrateAZ;
+        return this;
+    }
+    public java.util.List<ModifyDBProxyInstanceRequestMigrateAZ> getMigrateAZ() {
+        return this.migrateAZ;
     }
 
     public ModifyDBProxyInstanceRequest setOwnerId(Long ownerId) {
@@ -198,6 +220,89 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     }
     public String getVSwitchIds() {
         return this.vSwitchIds;
+    }
+
+    public static class ModifyDBProxyInstanceRequestDBProxyNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("cpuCores")
+        public String cpuCores;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("nodeCounts")
+        public String nodeCounts;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hagnzhou-c</p>
+         */
+        @NameInMap("zoneId")
+        public String zoneId;
+
+        public static ModifyDBProxyInstanceRequestDBProxyNodes build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBProxyInstanceRequestDBProxyNodes self = new ModifyDBProxyInstanceRequestDBProxyNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBProxyInstanceRequestDBProxyNodes setCpuCores(String cpuCores) {
+            this.cpuCores = cpuCores;
+            return this;
+        }
+        public String getCpuCores() {
+            return this.cpuCores;
+        }
+
+        public ModifyDBProxyInstanceRequestDBProxyNodes setNodeCounts(String nodeCounts) {
+            this.nodeCounts = nodeCounts;
+            return this;
+        }
+        public String getNodeCounts() {
+            return this.nodeCounts;
+        }
+
+        public ModifyDBProxyInstanceRequestDBProxyNodes setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class ModifyDBProxyInstanceRequestMigrateAZ extends TeaModel {
+        @NameInMap("dbProxyEndpointId")
+        public String dbProxyEndpointId;
+
+        @NameInMap("destVSwitchId")
+        public String destVSwitchId;
+
+        public static ModifyDBProxyInstanceRequestMigrateAZ build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBProxyInstanceRequestMigrateAZ self = new ModifyDBProxyInstanceRequestMigrateAZ();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBProxyInstanceRequestMigrateAZ setDbProxyEndpointId(String dbProxyEndpointId) {
+            this.dbProxyEndpointId = dbProxyEndpointId;
+            return this;
+        }
+        public String getDbProxyEndpointId() {
+            return this.dbProxyEndpointId;
+        }
+
+        public ModifyDBProxyInstanceRequestMigrateAZ setDestVSwitchId(String destVSwitchId) {
+            this.destVSwitchId = destVSwitchId;
+            return this;
+        }
+        public String getDestVSwitchId() {
+            return this.destVSwitchId;
+        }
+
     }
 
 }

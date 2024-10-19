@@ -58,6 +58,9 @@ public class ModifyDBProxyRequest extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    @NameInMap("DBProxyNodes")
+    public java.util.List<ModifyDBProxyRequestDBProxyNodes> DBProxyNodes;
+
     /**
      * <p>The network type of the instance. Set the value to <strong>VPC</strong>.</p>
      * <blockquote>
@@ -185,6 +188,14 @@ public class ModifyDBProxyRequest extends TeaModel {
         return this.DBProxyInstanceType;
     }
 
+    public ModifyDBProxyRequest setDBProxyNodes(java.util.List<ModifyDBProxyRequestDBProxyNodes> DBProxyNodes) {
+        this.DBProxyNodes = DBProxyNodes;
+        return this;
+    }
+    public java.util.List<ModifyDBProxyRequestDBProxyNodes> getDBProxyNodes() {
+        return this.DBProxyNodes;
+    }
+
     public ModifyDBProxyRequest setInstanceNetworkType(String instanceNetworkType) {
         this.instanceNetworkType = instanceNetworkType;
         return this;
@@ -255,6 +266,59 @@ public class ModifyDBProxyRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class ModifyDBProxyRequestDBProxyNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("cpuCores")
+        public String cpuCores;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("nodeCounts")
+        public String nodeCounts;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hagnzhou-c</p>
+         */
+        @NameInMap("zoneId")
+        public String zoneId;
+
+        public static ModifyDBProxyRequestDBProxyNodes build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBProxyRequestDBProxyNodes self = new ModifyDBProxyRequestDBProxyNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBProxyRequestDBProxyNodes setCpuCores(String cpuCores) {
+            this.cpuCores = cpuCores;
+            return this;
+        }
+        public String getCpuCores() {
+            return this.cpuCores;
+        }
+
+        public ModifyDBProxyRequestDBProxyNodes setNodeCounts(String nodeCounts) {
+            this.nodeCounts = nodeCounts;
+            return this;
+        }
+        public String getNodeCounts() {
+            return this.nodeCounts;
+        }
+
+        public ModifyDBProxyRequestDBProxyNodes setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
     }
 
 }

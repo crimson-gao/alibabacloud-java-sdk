@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateQueueShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The information about the queue to be updated.</p>
+     */
     @NameInMap("Queue")
     public String queueShrink;
 
