@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNatGatewayRequest extends TeaModel {
+    @NameInMap("AccessMode")
+    public CreateNatGatewayRequestAccessMode accessMode;
+
     /**
      * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
      * 
@@ -143,6 +146,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    @NameInMap("PrivateLinkEnabled")
+    public Boolean privateLinkEnabled;
+
     /**
      * <p>The region ID of the NAT gateway.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
@@ -218,6 +224,14 @@ public class CreateNatGatewayRequest extends TeaModel {
     public static CreateNatGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNatGatewayRequest self = new CreateNatGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateNatGatewayRequest setAccessMode(CreateNatGatewayRequestAccessMode accessMode) {
+        this.accessMode = accessMode;
+        return this;
+    }
+    public CreateNatGatewayRequestAccessMode getAccessMode() {
+        return this.accessMode;
     }
 
     public CreateNatGatewayRequest setAutoPay(Boolean autoPay) {
@@ -332,6 +346,14 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.pricingCycle;
     }
 
+    public CreateNatGatewayRequest setPrivateLinkEnabled(Boolean privateLinkEnabled) {
+        this.privateLinkEnabled = privateLinkEnabled;
+        return this;
+    }
+    public Boolean getPrivateLinkEnabled() {
+        return this.privateLinkEnabled;
+    }
+
     public CreateNatGatewayRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -394,6 +416,36 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class CreateNatGatewayRequestAccessMode extends TeaModel {
+        @NameInMap("ModeValue")
+        public String modeValue;
+
+        @NameInMap("TunnelType")
+        public String tunnelType;
+
+        public static CreateNatGatewayRequestAccessMode build(java.util.Map<String, ?> map) throws Exception {
+            CreateNatGatewayRequestAccessMode self = new CreateNatGatewayRequestAccessMode();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNatGatewayRequestAccessMode setModeValue(String modeValue) {
+            this.modeValue = modeValue;
+            return this;
+        }
+        public String getModeValue() {
+            return this.modeValue;
+        }
+
+        public CreateNatGatewayRequestAccessMode setTunnelType(String tunnelType) {
+            this.tunnelType = tunnelType;
+            return this;
+        }
+        public String getTunnelType() {
+            return this.tunnelType;
+        }
+
     }
 
     public static class CreateNatGatewayRequestTag extends TeaModel {

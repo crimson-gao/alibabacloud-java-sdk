@@ -14,7 +14,15 @@ public class GetSmsSignRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Signature name. Must be an SMS signature already applied for by this account.</p>
+     * <ul>
+     * <li>Obtain from the return parameters after calling the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-createsmssign?spm">CreateSmsSign</a> API.</li>
+     * <li>View the signature on the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Signature Management</a> page.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("SignName")
     public String signName;

@@ -1,27 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.eais20190624.models;
+package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class CreateEaiAllResponse extends TeaModel {
+public class ListDatasetVersionsResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public CreateEaiAllResponseBody body;
+    public ListDatasetVersionsResponseBody body;
 
-    public static CreateEaiAllResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateEaiAllResponse self = new CreateEaiAllResponse();
+    public static ListDatasetVersionsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListDatasetVersionsResponse self = new ListDatasetVersionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateEaiAllResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListDatasetVersionsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class CreateEaiAllResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateEaiAllResponse setStatusCode(Integer statusCode) {
+    public ListDatasetVersionsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class CreateEaiAllResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateEaiAllResponse setBody(CreateEaiAllResponseBody body) {
+    public ListDatasetVersionsResponse setBody(ListDatasetVersionsResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateEaiAllResponseBody getBody() {
+    public ListDatasetVersionsResponseBody getBody() {
         return this.body;
     }
 
