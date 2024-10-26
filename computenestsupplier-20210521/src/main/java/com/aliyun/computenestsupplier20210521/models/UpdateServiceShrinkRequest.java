@@ -44,6 +44,9 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     @NameInMap("Commodity")
     public String commodityShrink;
 
+    @NameInMap("ComplianceMetadata")
+    public String complianceMetadataShrink;
+
     /**
      * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
      * 
@@ -296,6 +299,14 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         return this.commodityShrink;
     }
 
+    public UpdateServiceShrinkRequest setComplianceMetadataShrink(String complianceMetadataShrink) {
+        this.complianceMetadataShrink = complianceMetadataShrink;
+        return this;
+    }
+    public String getComplianceMetadataShrink() {
+        return this.complianceMetadataShrink;
+    }
+
     public UpdateServiceShrinkRequest setDeployMetadata(String deployMetadata) {
         this.deployMetadata = deployMetadata;
         return this;
@@ -506,6 +517,36 @@ public class UpdateServiceShrinkRequest extends TeaModel {
 
     }
 
+    public static class UpdateServiceShrinkRequestServiceInfoSoftwares extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static UpdateServiceShrinkRequestServiceInfoSoftwares build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServiceShrinkRequestServiceInfoSoftwares self = new UpdateServiceShrinkRequestServiceInfoSoftwares();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceShrinkRequestServiceInfoSoftwares setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateServiceShrinkRequestServiceInfoSoftwares setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class UpdateServiceShrinkRequestServiceInfo extends TeaModel {
         /**
          * <p>Protocol document information about the service.</p>
@@ -562,6 +603,9 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        @NameInMap("Softwares")
+        public java.util.List<UpdateServiceShrinkRequestServiceInfoSoftwares> softwares;
+
         public static UpdateServiceShrinkRequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceShrinkRequestServiceInfo self = new UpdateServiceShrinkRequestServiceInfo();
             return TeaModel.build(map, self);
@@ -613,6 +657,14 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         }
         public String getShortDescription() {
             return this.shortDescription;
+        }
+
+        public UpdateServiceShrinkRequestServiceInfo setSoftwares(java.util.List<UpdateServiceShrinkRequestServiceInfoSoftwares> softwares) {
+            this.softwares = softwares;
+            return this;
+        }
+        public java.util.List<UpdateServiceShrinkRequestServiceInfoSoftwares> getSoftwares() {
+            return this.softwares;
         }
 
     }
