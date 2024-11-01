@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.sts20150401.models;
+package com.aliyun.linkedmallretrieval20240930.models;
 
 import com.aliyun.tea.*;
 
-public class AssumeRoleWithSAMLResponse extends TeaModel {
+public class GenericSearchResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AssumeRoleWithSAMLResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AssumeRoleWithSAMLResponseBody body;
+    public GenericSearchResult body;
 
-    public static AssumeRoleWithSAMLResponse build(java.util.Map<String, ?> map) throws Exception {
-        AssumeRoleWithSAMLResponse self = new AssumeRoleWithSAMLResponse();
+    public static GenericSearchResponse build(java.util.Map<String, ?> map) throws Exception {
+        GenericSearchResponse self = new GenericSearchResponse();
         return TeaModel.build(map, self);
     }
 
-    public AssumeRoleWithSAMLResponse setHeaders(java.util.Map<String, String> headers) {
+    public GenericSearchResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AssumeRoleWithSAMLResponse extends TeaModel {
         return this.headers;
     }
 
-    public AssumeRoleWithSAMLResponse setStatusCode(Integer statusCode) {
+    public GenericSearchResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AssumeRoleWithSAMLResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AssumeRoleWithSAMLResponse setBody(AssumeRoleWithSAMLResponseBody body) {
+    public GenericSearchResponse setBody(GenericSearchResult body) {
         this.body = body;
         return this;
     }
-    public AssumeRoleWithSAMLResponseBody getBody() {
+    public GenericSearchResult getBody() {
         return this.body;
     }
 
