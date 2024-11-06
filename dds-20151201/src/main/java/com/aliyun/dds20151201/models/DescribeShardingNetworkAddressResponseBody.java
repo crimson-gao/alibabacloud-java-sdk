@@ -11,7 +11,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     public DescribeShardingNetworkAddressResponseBodyCompatibleConnections compatibleConnections;
 
     /**
-     * <p>The endpoints of ApsaraDB for MongoDB instances.</p>
+     * <p>The endpoints of the ApsaraDB for MongoDB sharded cluster instance.</p>
      */
     @NameInMap("NetworkAddresses")
     public DescribeShardingNetworkAddressResponseBodyNetworkAddresses networkAddresses;
@@ -213,6 +213,19 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     public static class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress extends TeaModel {
         /**
+         * <p>The public endpoint type. Valid values:</p>
+         * <ul>
+         * <li><strong>SRV</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SRV</p>
+         */
+        @NameInMap("ConnectionType")
+        public String connectionType;
+
+        /**
          * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -299,6 +312,15 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>Txt record which can be used to store MongoDB-related meta data, such as version, configuration parameters and etc. With the combination of txt record and other technology, for example SRV record, the MongoDB client can complete the complex service discovery and configuration passing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongo.example.com. IN TXT &quot;config=replicaSet=myReplicaSet&quot;</p>
+         */
+        @NameInMap("TxtRecord")
+        public String txtRecord;
+
+        /**
          * <p>The VPC ID of the instance.</p>
          * <blockquote>
          * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
@@ -325,6 +347,14 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         public static DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress build(java.util.Map<String, ?> map) throws Exception {
             DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress self = new DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setConnectionType(String connectionType) {
+            this.connectionType = connectionType;
+            return this;
+        }
+        public String getConnectionType() {
+            return this.connectionType;
         }
 
         public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setExpiredTime(String expiredTime) {
@@ -389,6 +419,14 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
         public String getRole() {
             return this.role;
+        }
+
+        public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setTxtRecord(String txtRecord) {
+            this.txtRecord = txtRecord;
+            return this;
+        }
+        public String getTxtRecord() {
+            return this.txtRecord;
         }
 
         public DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress setVPCId(String VPCId) {
