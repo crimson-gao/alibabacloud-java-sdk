@@ -18,6 +18,9 @@ public class GetPermissionRequest extends TeaModel {
     @NameInMap("Creator")
     public String creator;
 
+    @NameInMap("Labels")
+    public java.util.Map<String, ?> labels;
+
     @NameInMap("Option")
     public String option;
 
@@ -43,6 +46,14 @@ public class GetPermissionRequest extends TeaModel {
     }
     public String getCreator() {
         return this.creator;
+    }
+
+    public GetPermissionRequest setLabels(java.util.Map<String, ?> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.Map<String, ?> getLabels() {
+        return this.labels;
     }
 
     public GetPermissionRequest setOption(String option) {
