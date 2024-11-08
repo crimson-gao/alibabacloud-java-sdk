@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.computenestsupplier20210521.models;
+package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class ListServiceCategoriesResponse extends TeaModel {
+public class UpdateCodeSourceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListServiceCategoriesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListServiceCategoriesResponseBody body;
+    public UpdateCodeSourceResponseBody body;
 
-    public static ListServiceCategoriesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListServiceCategoriesResponse self = new ListServiceCategoriesResponse();
+    public static UpdateCodeSourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateCodeSourceResponse self = new UpdateCodeSourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListServiceCategoriesResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateCodeSourceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListServiceCategoriesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListServiceCategoriesResponse setStatusCode(Integer statusCode) {
+    public UpdateCodeSourceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListServiceCategoriesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListServiceCategoriesResponse setBody(ListServiceCategoriesResponseBody body) {
+    public UpdateCodeSourceResponse setBody(UpdateCodeSourceResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListServiceCategoriesResponseBody getBody() {
+    public UpdateCodeSourceResponseBody getBody() {
         return this.body;
     }
 
