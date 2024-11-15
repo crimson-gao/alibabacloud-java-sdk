@@ -6,24 +6,41 @@ import com.aliyun.tea.*;
 public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200GB</p>
      */
     @NameInMap("CacheSize")
     public Integer cacheSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AB</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213c8y****-public.selectdbfe.pre.rds.aliyuncs.com</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb.xlarge</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
@@ -31,26 +48,45 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    /**
+     * <p>The type of the database. Default value: <strong>selectdb</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.4</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("Period")
     public String period;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>代表资源组的资源属性字段</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzt2zaluvuvqa_fake</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -58,28 +94,47 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.1.1</p>
+     */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateDBInstanceRequestTag> tag;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UsedTime")
     public Integer usedTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1gzt31twhlo0sa5****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>VPC ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp175iuvg8nxqraf2****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -193,6 +248,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.securityIPList;
     }
 
+    public CreateDBInstanceRequest setTag(java.util.List<CreateDBInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDBInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateDBInstanceRequest setUsedTime(Integer usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -223,6 +286,44 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateDBInstanceRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDBInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBInstanceRequestTag self = new CreateDBInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDBInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
