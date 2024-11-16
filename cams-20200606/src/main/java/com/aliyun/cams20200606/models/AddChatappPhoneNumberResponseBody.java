@@ -5,17 +5,16 @@ import com.aliyun.tea.*;
 
 public class AddChatappPhoneNumberResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>com.alicom.access.oxs.client.channel.aliyun.flow.AyFlowExecuteService</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://pop_access_slb_sgvpc/#vpc">http://pop_access_slb_sgvpc/#vpc</a></p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
-     * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
-     * </ul>
+     * <p>The phone number.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -24,7 +23,7 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>com.alicom.access.oxs.client.channel.aliyun.flow.dto.AyCommonApiRequest</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -33,7 +32,7 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>formData</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -42,6 +41,8 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>13800000000</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

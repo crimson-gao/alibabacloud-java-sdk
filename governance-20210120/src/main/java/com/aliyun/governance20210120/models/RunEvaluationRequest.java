@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class RunEvaluationRequest extends TeaModel {
     /**
+     * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+     * 
      * <strong>example:</strong>
      * <p>176618589410****</p>
      */
     @NameInMap("AccountId")
     public Long accountId;
 
+    @NameInMap("MetricIds")
+    public java.util.List<String> metricIds;
+
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +26,12 @@ public class RunEvaluationRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The check range of the governance maturity check. Valid values:</p>
+     * <ul>
+     * <li>Account (default): A single-account governance maturity check is performed to check only the Alibaba Cloud account that you use to access Cloud Governance Center.</li>
+     * <li>ResourceDirectory: A multi-account governance maturity check is performed to check all members within a resource directory. Before you perform a multi-account governance maturity check, you must enable the multi-account governance maturity check feature.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ResourceDirectory</p>
      */
@@ -36,6 +49,14 @@ public class RunEvaluationRequest extends TeaModel {
     }
     public Long getAccountId() {
         return this.accountId;
+    }
+
+    public RunEvaluationRequest setMetricIds(java.util.List<String> metricIds) {
+        this.metricIds = metricIds;
+        return this;
+    }
+    public java.util.List<String> getMetricIds() {
+        return this.metricIds;
     }
 
     public RunEvaluationRequest setRegionId(String regionId) {
