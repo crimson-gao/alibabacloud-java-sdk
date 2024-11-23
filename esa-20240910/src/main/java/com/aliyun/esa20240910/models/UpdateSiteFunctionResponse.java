@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.iqs20240712.models;
+package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class DrivingDirectionResponse extends TeaModel {
+public class UpdateSiteFunctionResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DrivingDirectionResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DrivingDirectionResponseBody body;
+    public UpdateSiteFunctionResponseBody body;
 
-    public static DrivingDirectionResponse build(java.util.Map<String, ?> map) throws Exception {
-        DrivingDirectionResponse self = new DrivingDirectionResponse();
+    public static UpdateSiteFunctionResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateSiteFunctionResponse self = new UpdateSiteFunctionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DrivingDirectionResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateSiteFunctionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DrivingDirectionResponse extends TeaModel {
         return this.headers;
     }
 
-    public DrivingDirectionResponse setStatusCode(Integer statusCode) {
+    public UpdateSiteFunctionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DrivingDirectionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DrivingDirectionResponse setBody(DrivingDirectionResponseBody body) {
+    public UpdateSiteFunctionResponse setBody(UpdateSiteFunctionResponseBody body) {
         this.body = body;
         return this;
     }
-    public DrivingDirectionResponseBody getBody() {
+    public UpdateSiteFunctionResponseBody getBody() {
         return this.body;
     }
 

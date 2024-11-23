@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.iqs20240712.models;
+package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class RectangleTrafficStatusResponse extends TeaModel {
+public class ListSiteFunctionsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class RectangleTrafficStatusResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public RectangleTrafficStatusResponseBody body;
+    public ListSiteFunctionsResponseBody body;
 
-    public static RectangleTrafficStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        RectangleTrafficStatusResponse self = new RectangleTrafficStatusResponse();
+    public static ListSiteFunctionsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListSiteFunctionsResponse self = new ListSiteFunctionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public RectangleTrafficStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListSiteFunctionsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class RectangleTrafficStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public RectangleTrafficStatusResponse setStatusCode(Integer statusCode) {
+    public ListSiteFunctionsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class RectangleTrafficStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RectangleTrafficStatusResponse setBody(RectangleTrafficStatusResponseBody body) {
+    public ListSiteFunctionsResponse setBody(ListSiteFunctionsResponseBody body) {
         this.body = body;
         return this;
     }
-    public RectangleTrafficStatusResponseBody getBody() {
+    public ListSiteFunctionsResponseBody getBody() {
         return this.body;
     }
 
