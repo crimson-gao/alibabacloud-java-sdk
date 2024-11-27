@@ -21,6 +21,12 @@ public class AnalyzeConversationResponseBody extends TeaModel {
     @NameInMap("finishReason")
     public String finishReason;
 
+    @NameInMap("inputTokens")
+    public String inputTokens;
+
+    @NameInMap("outputTokens")
+    public String outputTokens;
+
     /**
      * <strong>example:</strong>
      * <p>968A8634-FA2C-5381-9B3E-C552DED7E8BF</p>
@@ -37,6 +43,9 @@ public class AnalyzeConversationResponseBody extends TeaModel {
 
     @NameInMap("text")
     public String text;
+
+    @NameInMap("totalTokens")
+    public String totalTokens;
 
     public static AnalyzeConversationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AnalyzeConversationResponseBody self = new AnalyzeConversationResponseBody();
@@ -67,6 +76,22 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         return this.finishReason;
     }
 
+    public AnalyzeConversationResponseBody setInputTokens(String inputTokens) {
+        this.inputTokens = inputTokens;
+        return this;
+    }
+    public String getInputTokens() {
+        return this.inputTokens;
+    }
+
+    public AnalyzeConversationResponseBody setOutputTokens(String outputTokens) {
+        this.outputTokens = outputTokens;
+        return this;
+    }
+    public String getOutputTokens() {
+        return this.outputTokens;
+    }
+
     public AnalyzeConversationResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -89,6 +114,14 @@ public class AnalyzeConversationResponseBody extends TeaModel {
     }
     public String getText() {
         return this.text;
+    }
+
+    public AnalyzeConversationResponseBody setTotalTokens(String totalTokens) {
+        this.totalTokens = totalTokens;
+        return this;
+    }
+    public String getTotalTokens() {
+        return this.totalTokens;
     }
 
 }

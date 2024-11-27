@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGatewaysRequest extends TeaModel {
     /**
+     * <p>Query exactly by gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-cpv4sqdl****</p>
      */
@@ -12,6 +14,8 @@ public class ListGatewaysRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>Keyword, search with full match, case-insensitive.</p>
+     * 
      * <strong>example:</strong>
      * <p>dev</p>
      */
@@ -19,6 +23,8 @@ public class ListGatewaysRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>Query exactly by gateway name.</p>
+     * 
      * <strong>example:</strong>
      * <p>itemcenter-gateway</p>
      */
@@ -26,6 +32,8 @@ public class ListGatewaysRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,11 +41,19 @@ public class ListGatewaysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
+
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("tags")
+    public java.util.List<ListGatewaysRequestTags> tags;
 
     public static ListGatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewaysRequest self = new ListGatewaysRequest();
@@ -82,6 +98,52 @@ public class ListGatewaysRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListGatewaysRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ListGatewaysRequest setTags(java.util.List<ListGatewaysRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListGatewaysRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListGatewaysRequestTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListGatewaysRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewaysRequestTags self = new ListGatewaysRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewaysRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListGatewaysRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
