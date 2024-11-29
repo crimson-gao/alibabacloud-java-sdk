@@ -74,6 +74,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("DesktopAttachment")
+    public CreateDesktopsRequestDesktopAttachment desktopAttachment;
+
     /**
      * <p>The private IP address of the cloud computer.</p>
      * 
@@ -263,6 +266,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SnapshotPolicyId")
     public String snapshotPolicyId;
 
@@ -271,6 +277,9 @@ public class CreateDesktopsRequest extends TeaModel {
      */
     @NameInMap("Tag")
     public java.util.List<CreateDesktopsRequestTag> tag;
+
+    @NameInMap("TimerGroupId")
+    public String timerGroupId;
 
     /**
      * <p>How the cloud computers are assigned.</p>
@@ -400,6 +409,14 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.chargeType;
     }
 
+    public CreateDesktopsRequest setDesktopAttachment(CreateDesktopsRequestDesktopAttachment desktopAttachment) {
+        this.desktopAttachment = desktopAttachment;
+        return this;
+    }
+    public CreateDesktopsRequestDesktopAttachment getDesktopAttachment() {
+        return this.desktopAttachment;
+    }
+
     public CreateDesktopsRequest setDesktopMemberIp(String desktopMemberIp) {
         this.desktopMemberIp = desktopMemberIp;
         return this;
@@ -520,6 +537,14 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateDesktopsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateDesktopsRequest setSnapshotPolicyId(String snapshotPolicyId) {
         this.snapshotPolicyId = snapshotPolicyId;
         return this;
@@ -534,6 +559,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public java.util.List<CreateDesktopsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateDesktopsRequest setTimerGroupId(String timerGroupId) {
+        this.timerGroupId = timerGroupId;
+        return this;
+    }
+    public String getTimerGroupId() {
+        return this.timerGroupId;
     }
 
     public CreateDesktopsRequest setUserAssignMode(String userAssignMode) {
@@ -720,6 +753,113 @@ public class CreateDesktopsRequest extends TeaModel {
         }
         public String getVolumeEncryptionKey() {
             return this.volumeEncryptionKey;
+        }
+
+    }
+
+    public static class CreateDesktopsRequestDesktopAttachment extends TeaModel {
+        @NameInMap("DataDiskCategory")
+        public String dataDiskCategory;
+
+        @NameInMap("DataDiskPerLevel")
+        public String dataDiskPerLevel;
+
+        @NameInMap("DataDiskSize")
+        public Integer dataDiskSize;
+
+        @NameInMap("DefaultLanguage")
+        public String defaultLanguage;
+
+        @NameInMap("DesktopType")
+        public String desktopType;
+
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("SystemDiskCategory")
+        public String systemDiskCategory;
+
+        @NameInMap("SystemDiskPerLevel")
+        public String systemDiskPerLevel;
+
+        @NameInMap("SystemDiskSize")
+        public Integer systemDiskSize;
+
+        public static CreateDesktopsRequestDesktopAttachment build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsRequestDesktopAttachment self = new CreateDesktopsRequestDesktopAttachment();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDesktopsRequestDesktopAttachment setDataDiskCategory(String dataDiskCategory) {
+            this.dataDiskCategory = dataDiskCategory;
+            return this;
+        }
+        public String getDataDiskCategory() {
+            return this.dataDiskCategory;
+        }
+
+        public CreateDesktopsRequestDesktopAttachment setDataDiskPerLevel(String dataDiskPerLevel) {
+            this.dataDiskPerLevel = dataDiskPerLevel;
+            return this;
+        }
+        public String getDataDiskPerLevel() {
+            return this.dataDiskPerLevel;
+        }
+
+        public CreateDesktopsRequestDesktopAttachment setDataDiskSize(Integer dataDiskSize) {
+            this.dataDiskSize = dataDiskSize;
+            return this;
+        }
+        public Integer getDataDiskSize() {
+            return this.dataDiskSize;
+        }
+
+        public CreateDesktopsRequestDesktopAttachment setDefaultLanguage(String defaultLanguage) {
+            this.defaultLanguage = defaultLanguage;
+            return this;
+        }
+        public String getDefaultLanguage() {
+            return this.defaultLanguage;
+        }
+
+        public CreateDesktopsRequestDesktopAttachment setDesktopType(String desktopType) {
+            this.desktopType = desktopType;
+            return this;
+        }
+        public String getDesktopType() {
+            return this.desktopType;
+        }
+
+        public CreateDesktopsRequestDesktopAttachment setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public CreateDesktopsRequestDesktopAttachment setSystemDiskCategory(String systemDiskCategory) {
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        public CreateDesktopsRequestDesktopAttachment setSystemDiskPerLevel(String systemDiskPerLevel) {
+            this.systemDiskPerLevel = systemDiskPerLevel;
+            return this;
+        }
+        public String getSystemDiskPerLevel() {
+            return this.systemDiskPerLevel;
+        }
+
+        public CreateDesktopsRequestDesktopAttachment setSystemDiskSize(Integer systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
     }
