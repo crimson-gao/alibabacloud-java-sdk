@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.das20200116.models;
+package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class SyncHDMAliyunResourceResponse extends TeaModel {
+public class ListCiphersResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class SyncHDMAliyunResourceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public SyncHDMAliyunResourceResponseBody body;
+    public ListCiphersResponseBody body;
 
-    public static SyncHDMAliyunResourceResponse build(java.util.Map<String, ?> map) throws Exception {
-        SyncHDMAliyunResourceResponse self = new SyncHDMAliyunResourceResponse();
+    public static ListCiphersResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListCiphersResponse self = new ListCiphersResponse();
         return TeaModel.build(map, self);
     }
 
-    public SyncHDMAliyunResourceResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListCiphersResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class SyncHDMAliyunResourceResponse extends TeaModel {
         return this.headers;
     }
 
-    public SyncHDMAliyunResourceResponse setStatusCode(Integer statusCode) {
+    public ListCiphersResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class SyncHDMAliyunResourceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SyncHDMAliyunResourceResponse setBody(SyncHDMAliyunResourceResponseBody body) {
+    public ListCiphersResponse setBody(ListCiphersResponseBody body) {
         this.body = body;
         return this;
     }
-    public SyncHDMAliyunResourceResponseBody getBody() {
+    public ListCiphersResponseBody getBody() {
         return this.body;
     }
 

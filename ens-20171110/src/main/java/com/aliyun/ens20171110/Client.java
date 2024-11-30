@@ -3313,6 +3313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IdleTimeout", request.idleTimeout);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ispAffinity)) {
+            query.put("IspAffinity", request.ispAffinity);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
             query.put("NatGatewayId", request.natGatewayId);
         }
@@ -7975,6 +7979,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribeInstancesShrinkRequest request = new DescribeInstancesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceStatus)) {
+            request.serviceStatusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceStatus, "ServiceStatus", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
@@ -8042,6 +8050,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
             query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceStatusShrink)) {
+            query.put("ServiceStatus", request.serviceStatusShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {

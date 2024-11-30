@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.das20200116.models;
+package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class StopCloudBenchTaskResponse extends TeaModel {
+public class DescribeSyncJobListResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class StopCloudBenchTaskResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public StopCloudBenchTaskResponseBody body;
+    public DescribeSyncJobListResponseBody body;
 
-    public static StopCloudBenchTaskResponse build(java.util.Map<String, ?> map) throws Exception {
-        StopCloudBenchTaskResponse self = new StopCloudBenchTaskResponse();
+    public static DescribeSyncJobListResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSyncJobListResponse self = new DescribeSyncJobListResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopCloudBenchTaskResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeSyncJobListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class StopCloudBenchTaskResponse extends TeaModel {
         return this.headers;
     }
 
-    public StopCloudBenchTaskResponse setStatusCode(Integer statusCode) {
+    public DescribeSyncJobListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class StopCloudBenchTaskResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public StopCloudBenchTaskResponse setBody(StopCloudBenchTaskResponseBody body) {
+    public DescribeSyncJobListResponse setBody(DescribeSyncJobListResponseBody body) {
         this.body = body;
         return this;
     }
-    public StopCloudBenchTaskResponseBody getBody() {
+    public DescribeSyncJobListResponseBody getBody() {
         return this.body;
     }
 
