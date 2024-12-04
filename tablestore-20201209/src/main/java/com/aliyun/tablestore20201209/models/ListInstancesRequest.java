@@ -4,18 +4,59 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    /**
+     * <p>The name of the instance. Fuzzy search is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The names of the instances. This parameter is used to specify multiple instances that you want to query at the same time.</p>
+     */
+    @NameInMap("InstanceNameList")
+    public java.util.List<String> instanceNameList;
+
+    /**
+     * <p>The maximum number of instances that you want to return. Valid values: 0 to 200. If you do not configure this parameter or set this parameter to 0, the default value of 100 is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call. Instances are returned in lexicographical order starting from the position that is specified by this parameter. The first time you call the operation, leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAESCG15aC1xxxxx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The resource group ID. You can query the ID on the Resource Group page in the Resource Management console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek24upgom6p5ri</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The instance status.</p>
+     * <ul>
+     * <li>normal: The instance is running as expected.</li>
+     * <li>forbidden: The instance is disabled.</li>
+     * <li>Deleting: The instance is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -30,6 +71,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ListInstancesRequest setInstanceNameList(java.util.List<String> instanceNameList) {
+        this.instanceNameList = instanceNameList;
+        return this;
+    }
+    public java.util.List<String> getInstanceNameList() {
+        return this.instanceNameList;
     }
 
     public ListInstancesRequest setMaxResults(Integer maxResults) {
