@@ -56,6 +56,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("ExtraParams")
+    public java.util.Map<String, String> extraParams;
+
     @NameInMap("IsColumnarReadDBInstance")
     public Boolean isColumnarReadDBInstance;
 
@@ -258,6 +261,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public CreateDBInstanceRequest setExtraParams(java.util.Map<String, String> extraParams) {
+        this.extraParams = extraParams;
+        return this;
+    }
+    public java.util.Map<String, String> getExtraParams() {
+        return this.extraParams;
     }
 
     public CreateDBInstanceRequest setIsColumnarReadDBInstance(Boolean isColumnarReadDBInstance) {
