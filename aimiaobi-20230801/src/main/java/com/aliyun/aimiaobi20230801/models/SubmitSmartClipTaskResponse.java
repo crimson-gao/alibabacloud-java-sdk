@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.esa20240910.models;
+package com.aliyun.aimiaobi20230801.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSiteFunctionResponse extends TeaModel {
+public class SubmitSmartClipTaskResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateSiteFunctionResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateSiteFunctionResponseBody body;
+    public SubmitSmartClipTaskResponseBody body;
 
-    public static CreateSiteFunctionResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateSiteFunctionResponse self = new CreateSiteFunctionResponse();
+    public static SubmitSmartClipTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        SubmitSmartClipTaskResponse self = new SubmitSmartClipTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateSiteFunctionResponse setHeaders(java.util.Map<String, String> headers) {
+    public SubmitSmartClipTaskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateSiteFunctionResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateSiteFunctionResponse setStatusCode(Integer statusCode) {
+    public SubmitSmartClipTaskResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateSiteFunctionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateSiteFunctionResponse setBody(CreateSiteFunctionResponseBody body) {
+    public SubmitSmartClipTaskResponse setBody(SubmitSmartClipTaskResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateSiteFunctionResponseBody getBody() {
+    public SubmitSmartClipTaskResponseBody getBody() {
         return this.body;
     }
 

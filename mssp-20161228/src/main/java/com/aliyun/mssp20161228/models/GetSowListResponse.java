@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.esa20240910.models;
+package com.aliyun.mssp20161228.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteSiteFunctionResponse extends TeaModel {
+public class GetSowListResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteSiteFunctionResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteSiteFunctionResponseBody body;
+    public GetSowListResponseBody body;
 
-    public static DeleteSiteFunctionResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteSiteFunctionResponse self = new DeleteSiteFunctionResponse();
+    public static GetSowListResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetSowListResponse self = new GetSowListResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSiteFunctionResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetSowListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteSiteFunctionResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteSiteFunctionResponse setStatusCode(Integer statusCode) {
+    public GetSowListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteSiteFunctionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteSiteFunctionResponse setBody(DeleteSiteFunctionResponseBody body) {
+    public GetSowListResponse setBody(GetSowListResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteSiteFunctionResponseBody getBody() {
+    public GetSowListResponseBody getBody() {
         return this.body;
     }
 

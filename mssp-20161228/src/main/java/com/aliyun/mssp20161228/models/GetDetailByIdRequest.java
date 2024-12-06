@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDetailByIdRequest extends TeaModel {
     /**
+     * <p>Primary key ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.quanmiaolightapp20240801.models;
+package com.aliyun.mssp20161228.models;
 
 import com.aliyun.tea.*;
 
-public class RunCommentGenerationResponse extends TeaModel {
+public class GetVulListByIdResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class RunCommentGenerationResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public RunCommentGenerationResponseBody body;
+    public GetVulListByIdResponseBody body;
 
-    public static RunCommentGenerationResponse build(java.util.Map<String, ?> map) throws Exception {
-        RunCommentGenerationResponse self = new RunCommentGenerationResponse();
+    public static GetVulListByIdResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetVulListByIdResponse self = new GetVulListByIdResponse();
         return TeaModel.build(map, self);
     }
 
-    public RunCommentGenerationResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetVulListByIdResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class RunCommentGenerationResponse extends TeaModel {
         return this.headers;
     }
 
-    public RunCommentGenerationResponse setStatusCode(Integer statusCode) {
+    public GetVulListByIdResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class RunCommentGenerationResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RunCommentGenerationResponse setBody(RunCommentGenerationResponseBody body) {
+    public GetVulListByIdResponse setBody(GetVulListByIdResponseBody body) {
         this.body = body;
         return this;
     }
-    public RunCommentGenerationResponseBody getBody() {
+    public GetVulListByIdResponseBody getBody() {
         return this.body;
     }
 
