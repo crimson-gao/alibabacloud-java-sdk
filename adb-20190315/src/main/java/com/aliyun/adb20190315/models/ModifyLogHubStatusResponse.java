@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.eds_aic20230930.models;
+package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class GetAdbSecureResponse extends TeaModel {
+public class ModifyLogHubStatusResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetAdbSecureResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetAdbSecureResponseBody body;
+    public ModifyLogHubStatusResponseBody body;
 
-    public static GetAdbSecureResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetAdbSecureResponse self = new GetAdbSecureResponse();
+    public static ModifyLogHubStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyLogHubStatusResponse self = new ModifyLogHubStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAdbSecureResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyLogHubStatusResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetAdbSecureResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetAdbSecureResponse setStatusCode(Integer statusCode) {
+    public ModifyLogHubStatusResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetAdbSecureResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetAdbSecureResponse setBody(GetAdbSecureResponseBody body) {
+    public ModifyLogHubStatusResponse setBody(ModifyLogHubStatusResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetAdbSecureResponseBody getBody() {
+    public ModifyLogHubStatusResponseBody getBody() {
         return this.body;
     }
 

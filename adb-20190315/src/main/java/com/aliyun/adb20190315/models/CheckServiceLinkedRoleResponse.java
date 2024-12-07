@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.eds_aic20230930.models;
+package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class SetAdbSecureResponse extends TeaModel {
+public class CheckServiceLinkedRoleResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class SetAdbSecureResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public SetAdbSecureResponseBody body;
+    public CheckServiceLinkedRoleResponseBody body;
 
-    public static SetAdbSecureResponse build(java.util.Map<String, ?> map) throws Exception {
-        SetAdbSecureResponse self = new SetAdbSecureResponse();
+    public static CheckServiceLinkedRoleResponse build(java.util.Map<String, ?> map) throws Exception {
+        CheckServiceLinkedRoleResponse self = new CheckServiceLinkedRoleResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetAdbSecureResponse setHeaders(java.util.Map<String, String> headers) {
+    public CheckServiceLinkedRoleResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class SetAdbSecureResponse extends TeaModel {
         return this.headers;
     }
 
-    public SetAdbSecureResponse setStatusCode(Integer statusCode) {
+    public CheckServiceLinkedRoleResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class SetAdbSecureResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SetAdbSecureResponse setBody(SetAdbSecureResponseBody body) {
+    public CheckServiceLinkedRoleResponse setBody(CheckServiceLinkedRoleResponseBody body) {
         this.body = body;
         return this;
     }
-    public SetAdbSecureResponseBody getBody() {
+    public CheckServiceLinkedRoleResponseBody getBody() {
         return this.body;
     }
 
