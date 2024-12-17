@@ -31,6 +31,9 @@ public class UpdateCloudRecordRequest extends TeaModel {
     @NameInMap("Images")
     public java.util.List<UpdateCloudRecordRequestImages> images;
 
+    @NameInMap("LayoutSpecifiedUsers")
+    public UpdateCloudRecordRequestLayoutSpecifiedUsers layoutSpecifiedUsers;
+
     @NameInMap("Panes")
     public java.util.List<UpdateCloudRecordRequestPanes> panes;
 
@@ -98,6 +101,14 @@ public class UpdateCloudRecordRequest extends TeaModel {
     }
     public java.util.List<UpdateCloudRecordRequestImages> getImages() {
         return this.images;
+    }
+
+    public UpdateCloudRecordRequest setLayoutSpecifiedUsers(UpdateCloudRecordRequestLayoutSpecifiedUsers layoutSpecifiedUsers) {
+        this.layoutSpecifiedUsers = layoutSpecifiedUsers;
+        return this;
+    }
+    public UpdateCloudRecordRequestLayoutSpecifiedUsers getLayoutSpecifiedUsers() {
+        return this.layoutSpecifiedUsers;
     }
 
     public UpdateCloudRecordRequest setPanes(java.util.List<UpdateCloudRecordRequestPanes> panes) {
@@ -690,6 +701,42 @@ public class UpdateCloudRecordRequest extends TeaModel {
         }
         public Double getY() {
             return this.y;
+        }
+
+    }
+
+    public static class UpdateCloudRecordRequestLayoutSpecifiedUsers extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Ids")
+        public java.util.List<String> ids;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static UpdateCloudRecordRequestLayoutSpecifiedUsers build(java.util.Map<String, ?> map) throws Exception {
+            UpdateCloudRecordRequestLayoutSpecifiedUsers self = new UpdateCloudRecordRequestLayoutSpecifiedUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateCloudRecordRequestLayoutSpecifiedUsers setIds(java.util.List<String> ids) {
+            this.ids = ids;
+            return this;
+        }
+        public java.util.List<String> getIds() {
+            return this.ids;
+        }
+
+        public UpdateCloudRecordRequestLayoutSpecifiedUsers setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
