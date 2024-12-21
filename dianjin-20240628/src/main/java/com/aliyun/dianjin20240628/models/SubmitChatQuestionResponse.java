@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.esa20240910.models;
+package com.aliyun.dianjin20240628.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateListResponse extends TeaModel {
+public class SubmitChatQuestionResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UpdateListResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UpdateListResponseBody body;
+    public SubmitChatQuestionResponseBody body;
 
-    public static UpdateListResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateListResponse self = new UpdateListResponse();
+    public static SubmitChatQuestionResponse build(java.util.Map<String, ?> map) throws Exception {
+        SubmitChatQuestionResponse self = new SubmitChatQuestionResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateListResponse setHeaders(java.util.Map<String, String> headers) {
+    public SubmitChatQuestionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateListResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateListResponse setStatusCode(Integer statusCode) {
+    public SubmitChatQuestionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UpdateListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateListResponse setBody(UpdateListResponseBody body) {
+    public SubmitChatQuestionResponse setBody(SubmitChatQuestionResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateListResponseBody getBody() {
+    public SubmitChatQuestionResponseBody getBody() {
         return this.body;
     }
 

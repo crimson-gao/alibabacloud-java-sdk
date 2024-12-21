@@ -140,6 +140,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("EnableNewArms")
     public Boolean enableNewArms;
 
+    @NameInMap("EnableSidecarResourceIsolated")
+    public Boolean enableSidecarResourceIsolated;
+
     /**
      * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
      * 
@@ -445,6 +448,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("ServiceTags")
     public String serviceTags;
 
+    @NameInMap("SidecarContainersConfig")
+    public java.util.List<SidecarContainerConfig> sidecarContainersConfig;
+
     /**
      * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
      * 
@@ -672,6 +678,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public Boolean getEnableNewArms() {
         return this.enableNewArms;
+    }
+
+    public CreateApplicationRequest setEnableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {
+        this.enableSidecarResourceIsolated = enableSidecarResourceIsolated;
+        return this;
+    }
+    public Boolean getEnableSidecarResourceIsolated() {
+        return this.enableSidecarResourceIsolated;
     }
 
     public CreateApplicationRequest setEnvs(String envs) {
@@ -984,6 +998,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getServiceTags() {
         return this.serviceTags;
+    }
+
+    public CreateApplicationRequest setSidecarContainersConfig(java.util.List<SidecarContainerConfig> sidecarContainersConfig) {
+        this.sidecarContainersConfig = sidecarContainersConfig;
+        return this;
+    }
+    public java.util.List<SidecarContainerConfig> getSidecarContainersConfig() {
+        return this.sidecarContainersConfig;
     }
 
     public CreateApplicationRequest setSlsConfigs(String slsConfigs) {

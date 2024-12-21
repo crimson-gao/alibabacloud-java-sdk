@@ -199,6 +199,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("EnableNewArms")
     public Boolean enableNewArms;
 
+    @NameInMap("EnableSidecarResourceIsolated")
+    public Boolean enableSidecarResourceIsolated;
+
     /**
      * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</p>
      * <ul>
@@ -614,6 +617,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("ServiceTags")
     public String serviceTags;
 
+    @NameInMap("SidecarContainersConfig")
+    public java.util.List<SidecarContainerConfig> sidecarContainersConfig;
+
     /**
      * <p>The logging configurations of Log Service.</p>
      * <ul>
@@ -886,6 +892,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public Boolean getEnableNewArms() {
         return this.enableNewArms;
+    }
+
+    public DeployApplicationRequest setEnableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {
+        this.enableSidecarResourceIsolated = enableSidecarResourceIsolated;
+        return this;
+    }
+    public Boolean getEnableSidecarResourceIsolated() {
+        return this.enableSidecarResourceIsolated;
     }
 
     public DeployApplicationRequest setEnvs(String envs) {
@@ -1190,6 +1204,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getServiceTags() {
         return this.serviceTags;
+    }
+
+    public DeployApplicationRequest setSidecarContainersConfig(java.util.List<SidecarContainerConfig> sidecarContainersConfig) {
+        this.sidecarContainersConfig = sidecarContainersConfig;
+        return this;
+    }
+    public java.util.List<SidecarContainerConfig> getSidecarContainersConfig() {
+        return this.sidecarContainersConfig;
     }
 
     public DeployApplicationRequest setSlsConfigs(String slsConfigs) {
