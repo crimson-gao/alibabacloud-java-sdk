@@ -16,6 +16,9 @@ public class CreateAndPulishAgentShrinkRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("sampleLibrary")
+    public String sampleLibraryShrink;
+
     public static CreateAndPulishAgentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAndPulishAgentShrinkRequest self = new CreateAndPulishAgentShrinkRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateAndPulishAgentShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateAndPulishAgentShrinkRequest setSampleLibraryShrink(String sampleLibraryShrink) {
+        this.sampleLibraryShrink = sampleLibraryShrink;
+        return this;
+    }
+    public String getSampleLibraryShrink() {
+        return this.sampleLibraryShrink;
     }
 
 }

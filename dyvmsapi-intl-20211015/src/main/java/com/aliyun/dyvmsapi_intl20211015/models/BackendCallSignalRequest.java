@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class BackendCallSignalRequest extends TeaModel {
     /**
      * <p>The phone number that receives the voice notification.</p>
-     * <br>
-     * <p>You must add the country code to the beginning of the phone number. Example: 85200\*\*\*\*00.</p>
+     * <p>You must add the country code to the beginning of the phone number. Example: 85200\<em>\</em>\*\*00.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>852****0000</p>
      */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
     /**
      * <p>The calling number.</p>
-     * <br>
      * <p>If you do not specify this parameter, the system uses a local random number as the display number. If you use a dedicated number for outbound calls, you must specify the purchased number. You can specify only one number. You can log on to the VMS console and choose Number Management to view the purchased phone numbers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>852****0000</p>
      */
     @NameInMap("CallerIdNumber")
     public String callerIdNumber;
 
     /**
      * <p>The ISO2 country code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HK</p>
      */
     @NameInMap("CountryId")
     public String countryId;
 
     /**
      * <p>The ID reserved for the caller. This ID is returned to the caller in a receipt message.</p>
-     * <br>
      * <p>The value must be of the STRING type and 1 to 15 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22522****</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -39,6 +48,9 @@ public class BackendCallSignalRequest extends TeaModel {
 
     /**
      * <p>The number of times the voice notification is played back in a call. Valid values: 1 to 3. Default value: 3.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PlayTimes")
     public Long playTimes;
@@ -51,26 +63,37 @@ public class BackendCallSignalRequest extends TeaModel {
 
     /**
      * <p>The playback speed. Valid values: -500 to 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Speed")
     public Long speed;
 
     /**
      * <p>The ID of the approved voice verification code template.</p>
-     * <br>
      * <p>You can log on to the VMS console and choose Voice Call Template to view the template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1001</p>
      */
     @NameInMap("TtsCode")
     public String ttsCode;
 
     /**
      * <p>The variables in the template, in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;code&quot;:&quot;1234&quot;}</p>
      */
     @NameInMap("TtsParam")
     public String ttsParam;
 
     /**
      * <p>The playback volume of the voice notification. Valid values: 0 to 100. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Volume")
     public Long volume;
