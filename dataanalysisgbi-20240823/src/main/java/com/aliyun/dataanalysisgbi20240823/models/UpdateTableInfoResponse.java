@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.esa20240910.models;
+package com.aliyun.dataanalysisgbi20240823.models;
 
 import com.aliyun.tea.*;
 
-public class GetErServiceResponse extends TeaModel {
+public class UpdateTableInfoResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetErServiceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetErServiceResponseBody body;
+    public UpdateTableInfoResponseBody body;
 
-    public static GetErServiceResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetErServiceResponse self = new GetErServiceResponse();
+    public static UpdateTableInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateTableInfoResponse self = new UpdateTableInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetErServiceResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateTableInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetErServiceResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetErServiceResponse setStatusCode(Integer statusCode) {
+    public UpdateTableInfoResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetErServiceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetErServiceResponse setBody(GetErServiceResponseBody body) {
+    public UpdateTableInfoResponse setBody(UpdateTableInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetErServiceResponseBody getBody() {
+    public UpdateTableInfoResponseBody getBody() {
         return this.body;
     }
 
