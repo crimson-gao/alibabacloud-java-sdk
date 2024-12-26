@@ -3,7 +3,7 @@ package com.aliyun.vs20181212.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeClusterResponse extends TeaModel {
+public class CreateRenderingDataPackageResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeClusterResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeClusterResponseBody body;
+    public CreateRenderingDataPackageResponseBody body;
 
-    public static DescribeClusterResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeClusterResponse self = new DescribeClusterResponse();
+    public static CreateRenderingDataPackageResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateRenderingDataPackageResponse self = new CreateRenderingDataPackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClusterResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateRenderingDataPackageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeClusterResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeClusterResponse setStatusCode(Integer statusCode) {
+    public CreateRenderingDataPackageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeClusterResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeClusterResponse setBody(DescribeClusterResponseBody body) {
+    public CreateRenderingDataPackageResponse setBody(CreateRenderingDataPackageResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeClusterResponseBody getBody() {
+    public CreateRenderingDataPackageResponseBody getBody() {
         return this.body;
     }
 

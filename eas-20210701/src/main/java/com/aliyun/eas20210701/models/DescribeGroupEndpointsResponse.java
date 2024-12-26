@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.vs20181212.models;
+package com.aliyun.eas20210701.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeClustersResponse extends TeaModel {
+public class DescribeGroupEndpointsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeClustersResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeClustersResponseBody body;
+    public DescribeGroupEndpointsResponseBody body;
 
-    public static DescribeClustersResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeClustersResponse self = new DescribeClustersResponse();
+    public static DescribeGroupEndpointsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeGroupEndpointsResponse self = new DescribeGroupEndpointsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClustersResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeGroupEndpointsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeClustersResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeClustersResponse setStatusCode(Integer statusCode) {
+    public DescribeGroupEndpointsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeClustersResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeClustersResponse setBody(DescribeClustersResponseBody body) {
+    public DescribeGroupEndpointsResponse setBody(DescribeGroupEndpointsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeClustersResponseBody getBody() {
+    public DescribeGroupEndpointsResponseBody getBody() {
         return this.body;
     }
 

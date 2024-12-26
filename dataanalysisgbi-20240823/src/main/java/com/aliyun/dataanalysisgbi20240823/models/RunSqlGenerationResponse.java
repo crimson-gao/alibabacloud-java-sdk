@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.vs20181212.models;
+package com.aliyun.dataanalysisgbi20240823.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteClusterResponse extends TeaModel {
+public class RunSqlGenerationResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteClusterResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteClusterResponseBody body;
+    public RunSqlGenerationResponseBody body;
 
-    public static DeleteClusterResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteClusterResponse self = new DeleteClusterResponse();
+    public static RunSqlGenerationResponse build(java.util.Map<String, ?> map) throws Exception {
+        RunSqlGenerationResponse self = new RunSqlGenerationResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteClusterResponse setHeaders(java.util.Map<String, String> headers) {
+    public RunSqlGenerationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteClusterResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteClusterResponse setStatusCode(Integer statusCode) {
+    public RunSqlGenerationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteClusterResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteClusterResponse setBody(DeleteClusterResponseBody body) {
+    public RunSqlGenerationResponse setBody(RunSqlGenerationResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteClusterResponseBody getBody() {
+    public RunSqlGenerationResponseBody getBody() {
         return this.body;
     }
 

@@ -3,7 +3,7 @@ package com.aliyun.vs20181212.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeContainerInstanceIdResponse extends TeaModel {
+public class CreateRenderingInstanceGatewayResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeContainerInstanceIdResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeContainerInstanceIdResponseBody body;
+    public CreateRenderingInstanceGatewayResponseBody body;
 
-    public static DescribeContainerInstanceIdResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeContainerInstanceIdResponse self = new DescribeContainerInstanceIdResponse();
+    public static CreateRenderingInstanceGatewayResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateRenderingInstanceGatewayResponse self = new CreateRenderingInstanceGatewayResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeContainerInstanceIdResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateRenderingInstanceGatewayResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeContainerInstanceIdResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeContainerInstanceIdResponse setStatusCode(Integer statusCode) {
+    public CreateRenderingInstanceGatewayResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeContainerInstanceIdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeContainerInstanceIdResponse setBody(DescribeContainerInstanceIdResponseBody body) {
+    public CreateRenderingInstanceGatewayResponse setBody(CreateRenderingInstanceGatewayResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeContainerInstanceIdResponseBody getBody() {
+    public CreateRenderingInstanceGatewayResponseBody getBody() {
         return this.body;
     }
 

@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.vs20181212.models;
+package com.aliyun.dataanalysisgbi20240823.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeClusterDevicesResponse extends TeaModel {
+public class RunDataResultAnalysisResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeClusterDevicesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeClusterDevicesResponseBody body;
+    public RunDataResultAnalysisResponseBody body;
 
-    public static DescribeClusterDevicesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeClusterDevicesResponse self = new DescribeClusterDevicesResponse();
+    public static RunDataResultAnalysisResponse build(java.util.Map<String, ?> map) throws Exception {
+        RunDataResultAnalysisResponse self = new RunDataResultAnalysisResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClusterDevicesResponse setHeaders(java.util.Map<String, String> headers) {
+    public RunDataResultAnalysisResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeClusterDevicesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeClusterDevicesResponse setStatusCode(Integer statusCode) {
+    public RunDataResultAnalysisResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeClusterDevicesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeClusterDevicesResponse setBody(DescribeClusterDevicesResponseBody body) {
+    public RunDataResultAnalysisResponse setBody(RunDataResultAnalysisResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeClusterDevicesResponseBody getBody() {
+    public RunDataResultAnalysisResponseBody getBody() {
         return this.body;
     }
 

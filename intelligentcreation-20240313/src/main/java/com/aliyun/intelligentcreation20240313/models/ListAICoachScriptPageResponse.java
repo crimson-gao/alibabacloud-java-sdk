@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.vs20181212.models;
+package com.aliyun.intelligentcreation20240313.models;
 
 import com.aliyun.tea.*;
 
-public class CreateClusterResponse extends TeaModel {
+public class ListAICoachScriptPageResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateClusterResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateClusterResponseBody body;
+    public ListAICoachScriptPageResponseBody body;
 
-    public static CreateClusterResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateClusterResponse self = new CreateClusterResponse();
+    public static ListAICoachScriptPageResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAICoachScriptPageResponse self = new ListAICoachScriptPageResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateClusterResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListAICoachScriptPageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateClusterResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateClusterResponse setStatusCode(Integer statusCode) {
+    public ListAICoachScriptPageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateClusterResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateClusterResponse setBody(CreateClusterResponseBody body) {
+    public ListAICoachScriptPageResponse setBody(ListAICoachScriptPageResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateClusterResponseBody getBody() {
+    public ListAICoachScriptPageResponseBody getBody() {
         return this.body;
     }
 
