@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataLakeDatabaseResponseBody extends TeaModel {
     @NameInMap("DatabaseList")
-    public ListDataLakeDatabaseResponseBodyDatabaseList databaseList;
+    public java.util.List<DLDatabase> databaseList;
 
     /**
      * <strong>example:</strong>
@@ -46,11 +46,11 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDataLakeDatabaseResponseBody setDatabaseList(ListDataLakeDatabaseResponseBodyDatabaseList databaseList) {
+    public ListDataLakeDatabaseResponseBody setDatabaseList(java.util.List<DLDatabase> databaseList) {
         this.databaseList = databaseList;
         return this;
     }
-    public ListDataLakeDatabaseResponseBodyDatabaseList getDatabaseList() {
+    public java.util.List<DLDatabase> getDatabaseList() {
         return this.databaseList;
     }
 
@@ -100,25 +100,6 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class ListDataLakeDatabaseResponseBodyDatabaseList extends TeaModel {
-        @NameInMap("Database")
-        public java.util.List<DLDatabase> database;
-
-        public static ListDataLakeDatabaseResponseBodyDatabaseList build(java.util.Map<String, ?> map) throws Exception {
-            ListDataLakeDatabaseResponseBodyDatabaseList self = new ListDataLakeDatabaseResponseBodyDatabaseList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDataLakeDatabaseResponseBodyDatabaseList setDatabase(java.util.List<DLDatabase> database) {
-            this.database = database;
-            return this;
-        }
-        public java.util.List<DLDatabase> getDatabase() {
-            return this.database;
-        }
-
     }
 
 }

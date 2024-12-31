@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataLakeCatalogResponseBody extends TeaModel {
     @NameInMap("CataLogList")
-    public ListDataLakeCatalogResponseBodyCataLogList cataLogList;
+    public java.util.List<DLCatalog> cataLogList;
 
     /**
      * <strong>example:</strong>
@@ -40,11 +40,11 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDataLakeCatalogResponseBody setCataLogList(ListDataLakeCatalogResponseBodyCataLogList cataLogList) {
+    public ListDataLakeCatalogResponseBody setCataLogList(java.util.List<DLCatalog> cataLogList) {
         this.cataLogList = cataLogList;
         return this;
     }
-    public ListDataLakeCatalogResponseBodyCataLogList getCataLogList() {
+    public java.util.List<DLCatalog> getCataLogList() {
         return this.cataLogList;
     }
 
@@ -78,25 +78,6 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class ListDataLakeCatalogResponseBodyCataLogList extends TeaModel {
-        @NameInMap("Catalog")
-        public java.util.List<DLCatalog> catalog;
-
-        public static ListDataLakeCatalogResponseBodyCataLogList build(java.util.Map<String, ?> map) throws Exception {
-            ListDataLakeCatalogResponseBodyCataLogList self = new ListDataLakeCatalogResponseBodyCataLogList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDataLakeCatalogResponseBodyCataLogList setCatalog(java.util.List<DLCatalog> catalog) {
-            this.catalog = catalog;
-            return this;
-        }
-        public java.util.List<DLCatalog> getCatalog() {
-            return this.catalog;
-        }
-
     }
 
 }
