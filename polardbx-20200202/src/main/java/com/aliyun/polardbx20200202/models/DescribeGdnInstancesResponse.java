@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.esa20240910.models;
+package com.aliyun.polardbx20200202.models;
 
 import com.aliyun.tea.*;
 
-public class ChangeResourceGroupResponse extends TeaModel {
+public class DescribeGdnInstancesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ChangeResourceGroupResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ChangeResourceGroupResponseBody body;
+    public DescribeGdnInstancesResponseBody body;
 
-    public static ChangeResourceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
-        ChangeResourceGroupResponse self = new ChangeResourceGroupResponse();
+    public static DescribeGdnInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeGdnInstancesResponse self = new DescribeGdnInstancesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ChangeResourceGroupResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeGdnInstancesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ChangeResourceGroupResponse extends TeaModel {
         return this.headers;
     }
 
-    public ChangeResourceGroupResponse setStatusCode(Integer statusCode) {
+    public DescribeGdnInstancesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ChangeResourceGroupResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ChangeResourceGroupResponse setBody(ChangeResourceGroupResponseBody body) {
+    public DescribeGdnInstancesResponse setBody(DescribeGdnInstancesResponseBody body) {
         this.body = body;
         return this;
     }
-    public ChangeResourceGroupResponseBody getBody() {
+    public DescribeGdnInstancesResponseBody getBody() {
         return this.body;
     }
 
