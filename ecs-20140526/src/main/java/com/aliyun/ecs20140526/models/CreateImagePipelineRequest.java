@@ -13,13 +13,15 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("AddAccount")
     public java.util.List<Long> addAccount;
 
+    @NameInMap("AdvancedOptions")
+    public CreateImagePipelineRequestAdvancedOptions advancedOptions;
+
     /**
      * <p>The source image.</p>
      * <ul>
      * <li>If you set <code>BaseImageType</code> to IMAGE, set the BaseImage parameter to the ID of a custom image.</li>
      * <li>If you set <code>BaseImageType</code> to IMAGE_FAMILY, set the BaseImage parameter to the name of an image family.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp67acfmxazb4p****</p>
@@ -42,7 +44,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String baseImageType;
 
     /**
-     * <p>The content of the image template. The content cannot exceed 16 KB in size and can contain up to 127 commands. For more information about the commands that are supported, see the &quot;Usage notes&quot; section of this topic.</p>
+     * <p>The build content in the image template. The content cannot exceed 16 KB in size. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>FROM IMAGE:m-bp67acfmxazb4p****</p>
@@ -86,9 +88,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String description;
 
     /**
-     * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
-     * </blockquote>
+     * <p>The image family. The image family name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https:// and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -105,6 +105,9 @@ public class CreateImagePipelineRequest extends TeaModel {
      */
     @NameInMap("ImageName")
     public String imageName;
+
+    @NameInMap("ImportImageOptions")
+    public CreateImagePipelineRequestImportImageOptions importImageOptions;
 
     /**
      * <p>The instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query instance types.</p>
@@ -138,6 +141,9 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NvmeSupport")
+    public String nvmeSupport;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -155,8 +161,30 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The repair mode of the image template.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>Standard: the standard mode.</p>
+     * <p>Supported check items in Linux operating systems:</p>
+     * <ul>
+     * <li>GUESTOS.CloudInit</li>
+     * <li>GUESTOS.Dhcp</li>
+     * <li>GUESTOS.Virtio</li>
+     * <li>GUESTOS.OnlineResizeFS</li>
+     * <li>GUESTOS.Grub</li>
+     * <li>GUESTOS.Fstab</li>
+     * </ul>
+     * <p>Supported check items in Windows operating systems:</p>
+     * <ul>
+     * <li>GUESTOS.Virtio</li>
+     * <li>GUESTOS.Updat</li>
+     * <li>GUESTOS.Hotfix</li>
+     * <li>GUESTOS.Server</li>
+     * </ul>
+     * </li>
+     * </ul>
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p> As the check and repair capabilities continue to improve, the number of check items may increase. For more information about check items, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -197,9 +225,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public java.util.List<CreateImagePipelineRequestTag> tag;
 
     /**
-     * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
-     * </blockquote>
+     * <p>The test content in the image template. The content cannot exceed 16 KB in size. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -238,6 +264,14 @@ public class CreateImagePipelineRequest extends TeaModel {
     }
     public java.util.List<Long> getAddAccount() {
         return this.addAccount;
+    }
+
+    public CreateImagePipelineRequest setAdvancedOptions(CreateImagePipelineRequestAdvancedOptions advancedOptions) {
+        this.advancedOptions = advancedOptions;
+        return this;
+    }
+    public CreateImagePipelineRequestAdvancedOptions getAdvancedOptions() {
+        return this.advancedOptions;
     }
 
     public CreateImagePipelineRequest setBaseImage(String baseImage) {
@@ -304,6 +338,14 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.imageName;
     }
 
+    public CreateImagePipelineRequest setImportImageOptions(CreateImagePipelineRequestImportImageOptions importImageOptions) {
+        this.importImageOptions = importImageOptions;
+        return this;
+    }
+    public CreateImagePipelineRequestImportImageOptions getImportImageOptions() {
+        return this.importImageOptions;
+    }
+
     public CreateImagePipelineRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -326,6 +368,14 @@ public class CreateImagePipelineRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateImagePipelineRequest setNvmeSupport(String nvmeSupport) {
+        this.nvmeSupport = nvmeSupport;
+        return this;
+    }
+    public String getNvmeSupport() {
+        return this.nvmeSupport;
     }
 
     public CreateImagePipelineRequest setOwnerAccount(String ownerAccount) {
@@ -422,6 +472,192 @@ public class CreateImagePipelineRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class CreateImagePipelineRequestAdvancedOptions extends TeaModel {
+        @NameInMap("RetainCloudAssistant")
+        public Boolean retainCloudAssistant;
+
+        public static CreateImagePipelineRequestAdvancedOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestAdvancedOptions self = new CreateImagePipelineRequestAdvancedOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestAdvancedOptions setRetainCloudAssistant(Boolean retainCloudAssistant) {
+            this.retainCloudAssistant = retainCloudAssistant;
+            return this;
+        }
+        public Boolean getRetainCloudAssistant() {
+            return this.retainCloudAssistant;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings extends TeaModel {
+        @NameInMap("DiskImageSize")
+        public Integer diskImageSize;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("OSSBucket")
+        public String OSSBucket;
+
+        @NameInMap("OSSObject")
+        public String OSSObject;
+
+        public static CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings self = new CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings setDiskImageSize(Integer diskImageSize) {
+            this.diskImageSize = diskImageSize;
+            return this;
+        }
+        public Integer getDiskImageSize() {
+            return this.diskImageSize;
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings setOSSBucket(String OSSBucket) {
+            this.OSSBucket = OSSBucket;
+            return this;
+        }
+        public String getOSSBucket() {
+            return this.OSSBucket;
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings setOSSObject(String OSSObject) {
+            this.OSSObject = OSSObject;
+            return this;
+        }
+        public String getOSSObject() {
+            return this.OSSObject;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImportImageOptionsFeatures extends TeaModel {
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
+
+        public static CreateImagePipelineRequestImportImageOptionsFeatures build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImportImageOptionsFeatures self = new CreateImagePipelineRequestImportImageOptionsFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsFeatures setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
+            return this;
+        }
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImportImageOptions extends TeaModel {
+        @NameInMap("Architecture")
+        public String architecture;
+
+        @NameInMap("BootMode")
+        public String bootMode;
+
+        @NameInMap("DiskDeviceMappings")
+        public java.util.List<CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings> diskDeviceMappings;
+
+        @NameInMap("Features")
+        public CreateImagePipelineRequestImportImageOptionsFeatures features;
+
+        @NameInMap("LicenseType")
+        public String licenseType;
+
+        @NameInMap("OSType")
+        public String OSType;
+
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("RetainImportedImage")
+        public Boolean retainImportedImage;
+
+        public static CreateImagePipelineRequestImportImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImportImageOptions self = new CreateImagePipelineRequestImportImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setArchitecture(String architecture) {
+            this.architecture = architecture;
+            return this;
+        }
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setBootMode(String bootMode) {
+            this.bootMode = bootMode;
+            return this;
+        }
+        public String getBootMode() {
+            return this.bootMode;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setDiskDeviceMappings(java.util.List<CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings> diskDeviceMappings) {
+            this.diskDeviceMappings = diskDeviceMappings;
+            return this;
+        }
+        public java.util.List<CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings> getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setFeatures(CreateImagePipelineRequestImportImageOptionsFeatures features) {
+            this.features = features;
+            return this;
+        }
+        public CreateImagePipelineRequestImportImageOptionsFeatures getFeatures() {
+            return this.features;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setLicenseType(String licenseType) {
+            this.licenseType = licenseType;
+            return this;
+        }
+        public String getLicenseType() {
+            return this.licenseType;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setOSType(String OSType) {
+            this.OSType = OSType;
+            return this;
+        }
+        public String getOSType() {
+            return this.OSType;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setRetainImportedImage(Boolean retainImportedImage) {
+            this.retainImportedImage = retainImportedImage;
+            return this;
+        }
+        public Boolean getRetainImportedImage() {
+            return this.retainImportedImage;
+        }
+
     }
 
     public static class CreateImagePipelineRequestTag extends TeaModel {
