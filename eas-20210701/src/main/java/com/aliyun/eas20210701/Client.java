@@ -1885,7 +1885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取群组端点列表</p>
+     * <p>Obtains a list of endpoints of service groups.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1911,7 +1911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取群组端点列表</p>
+     * <p>Obtains a list of endpoints of service groups.</p>
      * @return DescribeGroupEndpointsResponse
      */
     public DescribeGroupEndpointsResponse describeGroupEndpoints(String ClusterId, String GroupName) throws Exception {
@@ -2181,7 +2181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务端点列表</p>
+     * <p>Obtains a list of service endpoints.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2207,7 +2207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务端点列表</p>
+     * <p>Obtains a list of service endpoints.</p>
      * @return DescribeServiceEndpointsResponse
      */
     public DescribeServiceEndpointsResponse describeServiceEndpoints(String ClusterId, String ServiceName) throws Exception {
@@ -2438,7 +2438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务监控签名地址</p>
+     * <p>Obtains the logon-free URL of the service.</p>
      * 
      * @param request DescribeServiceSignedUrlRequest
      * @param headers map
@@ -2480,7 +2480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务监控签名地址</p>
+     * <p>Obtains the logon-free URL of the service.</p>
      * 
      * @param request DescribeServiceSignedUrlRequest
      * @return DescribeServiceSignedUrlResponse

@@ -4,8 +4,18 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunVideoAnalysisShrinkRequest extends TeaModel {
+    @NameInMap("frameSampleMethod")
+    public String frameSampleMethodShrink;
+
     @NameInMap("generateOptions")
     public String generateOptionsShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>english</p>
+     */
+    @NameInMap("language")
+    public String language;
 
     @NameInMap("modelCustomPromptTemplate")
     public String modelCustomPromptTemplate;
@@ -54,6 +64,9 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
     @NameInMap("videoModelId")
     public String videoModelId;
 
+    @NameInMap("videoRoles")
+    public String videoRolesShrink;
+
     /**
      * <strong>example:</strong>
      * <p><a href="http://xxxx.mp4">http://xxxx.mp4</a></p>
@@ -66,12 +79,28 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RunVideoAnalysisShrinkRequest setFrameSampleMethodShrink(String frameSampleMethodShrink) {
+        this.frameSampleMethodShrink = frameSampleMethodShrink;
+        return this;
+    }
+    public String getFrameSampleMethodShrink() {
+        return this.frameSampleMethodShrink;
+    }
+
     public RunVideoAnalysisShrinkRequest setGenerateOptionsShrink(String generateOptionsShrink) {
         this.generateOptionsShrink = generateOptionsShrink;
         return this;
     }
     public String getGenerateOptionsShrink() {
         return this.generateOptionsShrink;
+    }
+
+    public RunVideoAnalysisShrinkRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public RunVideoAnalysisShrinkRequest setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
@@ -144,6 +173,14 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
     }
     public String getVideoModelId() {
         return this.videoModelId;
+    }
+
+    public RunVideoAnalysisShrinkRequest setVideoRolesShrink(String videoRolesShrink) {
+        this.videoRolesShrink = videoRolesShrink;
+        return this;
+    }
+    public String getVideoRolesShrink() {
+        return this.videoRolesShrink;
     }
 
     public RunVideoAnalysisShrinkRequest setVideoUrl(String videoUrl) {

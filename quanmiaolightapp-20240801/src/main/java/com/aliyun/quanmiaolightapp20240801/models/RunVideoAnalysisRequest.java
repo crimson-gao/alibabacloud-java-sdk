@@ -4,8 +4,18 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunVideoAnalysisRequest extends TeaModel {
+    @NameInMap("frameSampleMethod")
+    public RunVideoAnalysisRequestFrameSampleMethod frameSampleMethod;
+
     @NameInMap("generateOptions")
     public java.util.List<String> generateOptions;
+
+    /**
+     * <strong>example:</strong>
+     * <p>english</p>
+     */
+    @NameInMap("language")
+    public String language;
 
     @NameInMap("modelCustomPromptTemplate")
     public String modelCustomPromptTemplate;
@@ -54,6 +64,9 @@ public class RunVideoAnalysisRequest extends TeaModel {
     @NameInMap("videoModelId")
     public String videoModelId;
 
+    @NameInMap("videoRoles")
+    public java.util.List<RunVideoAnalysisRequestVideoRoles> videoRoles;
+
     /**
      * <strong>example:</strong>
      * <p><a href="http://xxxx.mp4">http://xxxx.mp4</a></p>
@@ -66,12 +79,28 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RunVideoAnalysisRequest setFrameSampleMethod(RunVideoAnalysisRequestFrameSampleMethod frameSampleMethod) {
+        this.frameSampleMethod = frameSampleMethod;
+        return this;
+    }
+    public RunVideoAnalysisRequestFrameSampleMethod getFrameSampleMethod() {
+        return this.frameSampleMethod;
+    }
+
     public RunVideoAnalysisRequest setGenerateOptions(java.util.List<String> generateOptions) {
         this.generateOptions = generateOptions;
         return this;
     }
     public java.util.List<String> getGenerateOptions() {
         return this.generateOptions;
+    }
+
+    public RunVideoAnalysisRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public RunVideoAnalysisRequest setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
@@ -146,12 +175,102 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.videoModelId;
     }
 
+    public RunVideoAnalysisRequest setVideoRoles(java.util.List<RunVideoAnalysisRequestVideoRoles> videoRoles) {
+        this.videoRoles = videoRoles;
+        return this;
+    }
+    public java.util.List<RunVideoAnalysisRequestVideoRoles> getVideoRoles() {
+        return this.videoRoles;
+    }
+
     public RunVideoAnalysisRequest setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
         return this;
     }
     public String getVideoUrl() {
         return this.videoUrl;
+    }
+
+    public static class RunVideoAnalysisRequestFrameSampleMethod extends TeaModel {
+        @NameInMap("interval")
+        public Double interval;
+
+        @NameInMap("methodName")
+        public String methodName;
+
+        @NameInMap("pixel")
+        public Integer pixel;
+
+        public static RunVideoAnalysisRequestFrameSampleMethod build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisRequestFrameSampleMethod self = new RunVideoAnalysisRequestFrameSampleMethod();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisRequestFrameSampleMethod setInterval(Double interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Double getInterval() {
+            return this.interval;
+        }
+
+        public RunVideoAnalysisRequestFrameSampleMethod setMethodName(String methodName) {
+            this.methodName = methodName;
+            return this;
+        }
+        public String getMethodName() {
+            return this.methodName;
+        }
+
+        public RunVideoAnalysisRequestFrameSampleMethod setPixel(Integer pixel) {
+            this.pixel = pixel;
+            return this;
+        }
+        public Integer getPixel() {
+            return this.pixel;
+        }
+
+    }
+
+    public static class RunVideoAnalysisRequestVideoRoles extends TeaModel {
+        @NameInMap("roleInfo")
+        public String roleInfo;
+
+        @NameInMap("roleName")
+        public String roleName;
+
+        @NameInMap("urls")
+        public java.util.List<String> urls;
+
+        public static RunVideoAnalysisRequestVideoRoles build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisRequestVideoRoles self = new RunVideoAnalysisRequestVideoRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisRequestVideoRoles setRoleInfo(String roleInfo) {
+            this.roleInfo = roleInfo;
+            return this;
+        }
+        public String getRoleInfo() {
+            return this.roleInfo;
+        }
+
+        public RunVideoAnalysisRequestVideoRoles setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public RunVideoAnalysisRequestVideoRoles setUrls(java.util.List<String> urls) {
+            this.urls = urls;
+            return this;
+        }
+        public java.util.List<String> getUrls() {
+            return this.urls;
+        }
+
     }
 
 }
