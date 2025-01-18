@@ -4,20 +4,34 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class TranslateGeneralRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;appName\&quot;:\&quot;alynx\&quot;}</p>
+     */
     @NameInMap("Context")
     public String context;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
      */
     @NameInMap("FormatType")
     public String formatType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>general</p>
+     */
     @NameInMap("Scene")
     public String scene;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
@@ -30,6 +44,9 @@ public class TranslateGeneralRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("TargetLanguage")
     public String targetLanguage;
