@@ -15,6 +15,12 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The compliance package ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-fe416457e0d90022****</p>
+     */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
