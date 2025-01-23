@@ -116,6 +116,9 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    @NameInMap("Tag")
+    public java.util.List<ListAggregateConfigRulesRequestTag> tag;
+
     public static ListAggregateConfigRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAggregateConfigRulesRequest self = new ListAggregateConfigRulesRequest();
         return TeaModel.build(map, self);
@@ -199,6 +202,44 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public ListAggregateConfigRulesRequest setTag(java.util.List<ListAggregateConfigRulesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListAggregateConfigRulesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListAggregateConfigRulesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAggregateConfigRulesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListAggregateConfigRulesRequestTag self = new ListAggregateConfigRulesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAggregateConfigRulesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAggregateConfigRulesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
