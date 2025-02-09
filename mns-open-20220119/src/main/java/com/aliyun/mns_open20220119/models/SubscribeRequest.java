@@ -4,6 +4,9 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class SubscribeRequest extends TeaModel {
+    @NameInMap("DlqPolicy")
+    public SubscribeRequestDlqPolicy dlqPolicy;
+
     /**
      * <p>The receiver endpoint. The format of the endpoint varies based on the terminal type.</p>
      * <ul>
@@ -100,6 +103,14 @@ public class SubscribeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SubscribeRequest setDlqPolicy(SubscribeRequestDlqPolicy dlqPolicy) {
+        this.dlqPolicy = dlqPolicy;
+        return this;
+    }
+    public SubscribeRequestDlqPolicy getDlqPolicy() {
+        return this.dlqPolicy;
+    }
+
     public SubscribeRequest setEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -154,6 +165,36 @@ public class SubscribeRequest extends TeaModel {
     }
     public String getTopicName() {
         return this.topicName;
+    }
+
+    public static class SubscribeRequestDlqPolicy extends TeaModel {
+        @NameInMap("DeadLetterTargetQueue")
+        public String deadLetterTargetQueue;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static SubscribeRequestDlqPolicy build(java.util.Map<String, ?> map) throws Exception {
+            SubscribeRequestDlqPolicy self = new SubscribeRequestDlqPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public SubscribeRequestDlqPolicy setDeadLetterTargetQueue(String deadLetterTargetQueue) {
+            this.deadLetterTargetQueue = deadLetterTargetQueue;
+            return this;
+        }
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        public SubscribeRequestDlqPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
     }
 
 }

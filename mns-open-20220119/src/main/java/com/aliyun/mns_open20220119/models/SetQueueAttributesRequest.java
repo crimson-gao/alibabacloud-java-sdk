@@ -13,6 +13,9 @@ public class SetQueueAttributesRequest extends TeaModel {
     @NameInMap("DelaySeconds")
     public Long delaySeconds;
 
+    @NameInMap("DlqPolicy")
+    public SetQueueAttributesRequestDlqPolicy dlqPolicy;
+
     /**
      * <p>Specifies whether to enable the log management feature. Valid values:</p>
      * <ul>
@@ -85,6 +88,14 @@ public class SetQueueAttributesRequest extends TeaModel {
         return this.delaySeconds;
     }
 
+    public SetQueueAttributesRequest setDlqPolicy(SetQueueAttributesRequestDlqPolicy dlqPolicy) {
+        this.dlqPolicy = dlqPolicy;
+        return this;
+    }
+    public SetQueueAttributesRequestDlqPolicy getDlqPolicy() {
+        return this.dlqPolicy;
+    }
+
     public SetQueueAttributesRequest setEnableLogging(Boolean enableLogging) {
         this.enableLogging = enableLogging;
         return this;
@@ -131,6 +142,47 @@ public class SetQueueAttributesRequest extends TeaModel {
     }
     public Long getVisibilityTimeout() {
         return this.visibilityTimeout;
+    }
+
+    public static class SetQueueAttributesRequestDlqPolicy extends TeaModel {
+        @NameInMap("DeadLetterTargetQueue")
+        public String deadLetterTargetQueue;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxReceiveCount")
+        public Integer maxReceiveCount;
+
+        public static SetQueueAttributesRequestDlqPolicy build(java.util.Map<String, ?> map) throws Exception {
+            SetQueueAttributesRequestDlqPolicy self = new SetQueueAttributesRequestDlqPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public SetQueueAttributesRequestDlqPolicy setDeadLetterTargetQueue(String deadLetterTargetQueue) {
+            this.deadLetterTargetQueue = deadLetterTargetQueue;
+            return this;
+        }
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        public SetQueueAttributesRequestDlqPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public SetQueueAttributesRequestDlqPolicy setMaxReceiveCount(Integer maxReceiveCount) {
+            this.maxReceiveCount = maxReceiveCount;
+            return this;
+        }
+        public Integer getMaxReceiveCount() {
+            return this.maxReceiveCount;
+        }
+
     }
 
 }
