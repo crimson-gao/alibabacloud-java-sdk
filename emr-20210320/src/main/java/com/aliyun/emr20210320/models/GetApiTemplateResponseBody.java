@@ -25,6 +25,7 @@ public class GetApiTemplateResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public GetApiTemplateResponseBody setData(ApiTemplate data) {
         this.data = data;
         return this;
