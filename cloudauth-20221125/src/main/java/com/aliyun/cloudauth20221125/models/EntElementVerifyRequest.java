@@ -7,27 +7,55 @@ public class EntElementVerifyRequest extends TeaModel {
     @NameInMap("EntName")
     public String entName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ENT_2META</p>
+     */
     @NameInMap("InfoVerifyType")
     public String infoVerifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>370105*****3892</p>
+     */
     @NameInMap("LegalPersonCertNo")
     public String legalPersonCertNo;
 
     @NameInMap("LegalPersonName")
     public String legalPersonName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32132***328932</p>
+     */
     @NameInMap("LicenseNo")
     public String licenseNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32198****193000</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>432***421</p>
+     */
     @NameInMap("MerchantUserId")
     public String merchantUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>withdraw</p>
+     */
     @NameInMap("SceneCode")
     public String sceneCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UserAuthorization")
     public String userAuthorization;
 

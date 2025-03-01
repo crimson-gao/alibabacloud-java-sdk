@@ -82,13 +82,15 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The scope of networks that you want to advertise the aggregate route.</p>
      * <p>Set the value to <strong>VPC</strong>, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */
     @NameInMap("TransitRouteTableAggregationScope")
     public String transitRouteTableAggregationScope;
+
+    @NameInMap("TransitRouteTableAggregationScopeList")
+    public java.util.List<String> transitRouteTableAggregationScopeList;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
@@ -183,6 +185,14 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     }
     public String getTransitRouteTableAggregationScope() {
         return this.transitRouteTableAggregationScope;
+    }
+
+    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationScopeList(java.util.List<String> transitRouteTableAggregationScopeList) {
+        this.transitRouteTableAggregationScopeList = transitRouteTableAggregationScopeList;
+        return this;
+    }
+    public java.util.List<String> getTransitRouteTableAggregationScopeList() {
+        return this.transitRouteTableAggregationScopeList;
     }
 
     public CreateTransitRouteTableAggregationRequest setTransitRouteTableId(String transitRouteTableId) {
