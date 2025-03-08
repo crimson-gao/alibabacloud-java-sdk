@@ -229,6 +229,15 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String extPlantFrom;
 
         /**
+         * <p>The amount of scanned data for the job. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
+        @NameInMap("inputBytes")
+        public Double inputBytes;
+
+        /**
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
@@ -473,6 +482,14 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
         public String getExtPlantFrom() {
             return this.extPlantFrom;
+        }
+
+        public ListJobInfosResponseBodyDataJobInfoList setInputBytes(Double inputBytes) {
+            this.inputBytes = inputBytes;
+            return this;
+        }
+        public Double getInputBytes() {
+            return this.inputBytes;
         }
 
         public ListJobInfosResponseBodyDataJobInfoList setInstanceId(String instanceId) {
