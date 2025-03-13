@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTopologyRequest extends TeaModel {
     /**
-     * <p>The status of the node.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

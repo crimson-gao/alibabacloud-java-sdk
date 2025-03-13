@@ -200,6 +200,12 @@ public class CreateCollectionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SparseVectorIndexConfig")
+    public CreateCollectionRequestSparseVectorIndexConfig sparseVectorIndexConfig;
+
+    @NameInMap("SupportSparse")
+    public Boolean supportSparse;
+
     /**
      * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
      * 
@@ -350,12 +356,58 @@ public class CreateCollectionRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateCollectionRequest setSparseVectorIndexConfig(CreateCollectionRequestSparseVectorIndexConfig sparseVectorIndexConfig) {
+        this.sparseVectorIndexConfig = sparseVectorIndexConfig;
+        return this;
+    }
+    public CreateCollectionRequestSparseVectorIndexConfig getSparseVectorIndexConfig() {
+        return this.sparseVectorIndexConfig;
+    }
+
+    public CreateCollectionRequest setSupportSparse(Boolean supportSparse) {
+        this.supportSparse = supportSparse;
+        return this;
+    }
+    public Boolean getSupportSparse() {
+        return this.supportSparse;
+    }
+
     public CreateCollectionRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class CreateCollectionRequestSparseVectorIndexConfig extends TeaModel {
+        @NameInMap("HnswEfConstruction")
+        public Integer hnswEfConstruction;
+
+        @NameInMap("HnswM")
+        public Integer hnswM;
+
+        public static CreateCollectionRequestSparseVectorIndexConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateCollectionRequestSparseVectorIndexConfig self = new CreateCollectionRequestSparseVectorIndexConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCollectionRequestSparseVectorIndexConfig setHnswEfConstruction(Integer hnswEfConstruction) {
+            this.hnswEfConstruction = hnswEfConstruction;
+            return this;
+        }
+        public Integer getHnswEfConstruction() {
+            return this.hnswEfConstruction;
+        }
+
+        public CreateCollectionRequestSparseVectorIndexConfig setHnswM(Integer hnswM) {
+            this.hnswM = hnswM;
+            return this;
+        }
+        public Integer getHnswM() {
+            return this.hnswM;
+        }
+
     }
 
 }
