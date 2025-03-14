@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.arms20190808.models;
+package com.aliyun.intelligentcreation20240313.models;
 
 import com.aliyun.tea.*;
 
-public class ManageRecordingRuleResponse extends TeaModel {
+public class ListAgentsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ManageRecordingRuleResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ManageRecordingRuleResponseBody body;
+    public ListAgentsResponseBody body;
 
-    public static ManageRecordingRuleResponse build(java.util.Map<String, ?> map) throws Exception {
-        ManageRecordingRuleResponse self = new ManageRecordingRuleResponse();
+    public static ListAgentsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAgentsResponse self = new ListAgentsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ManageRecordingRuleResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListAgentsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ManageRecordingRuleResponse extends TeaModel {
         return this.headers;
     }
 
-    public ManageRecordingRuleResponse setStatusCode(Integer statusCode) {
+    public ListAgentsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ManageRecordingRuleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ManageRecordingRuleResponse setBody(ManageRecordingRuleResponseBody body) {
+    public ListAgentsResponse setBody(ListAgentsResponseBody body) {
         this.body = body;
         return this;
     }
-    public ManageRecordingRuleResponseBody getBody() {
+    public ListAgentsResponseBody getBody() {
         return this.body;
     }
 

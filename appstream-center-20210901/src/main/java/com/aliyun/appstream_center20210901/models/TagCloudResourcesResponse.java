@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.arms20190808.models;
+package com.aliyun.appstream_center20210901.models;
 
 import com.aliyun.tea.*;
 
-public class ManageGetRecordingRuleResponse extends TeaModel {
+public class TagCloudResourcesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ManageGetRecordingRuleResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ManageGetRecordingRuleResponseBody body;
+    public TagCloudResourcesResponseBody body;
 
-    public static ManageGetRecordingRuleResponse build(java.util.Map<String, ?> map) throws Exception {
-        ManageGetRecordingRuleResponse self = new ManageGetRecordingRuleResponse();
+    public static TagCloudResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        TagCloudResourcesResponse self = new TagCloudResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ManageGetRecordingRuleResponse setHeaders(java.util.Map<String, String> headers) {
+    public TagCloudResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ManageGetRecordingRuleResponse extends TeaModel {
         return this.headers;
     }
 
-    public ManageGetRecordingRuleResponse setStatusCode(Integer statusCode) {
+    public TagCloudResourcesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ManageGetRecordingRuleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ManageGetRecordingRuleResponse setBody(ManageGetRecordingRuleResponseBody body) {
+    public TagCloudResourcesResponse setBody(TagCloudResourcesResponseBody body) {
         this.body = body;
         return this;
     }
-    public ManageGetRecordingRuleResponseBody getBody() {
+    public TagCloudResourcesResponseBody getBody() {
         return this.body;
     }
 
