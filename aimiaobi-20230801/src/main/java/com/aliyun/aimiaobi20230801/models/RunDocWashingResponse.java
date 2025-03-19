@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.sophonsoar20220728.models;
+package com.aliyun.aimiaobi20230801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApiListResponse extends TeaModel {
+public class RunDocWashingResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeApiListResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeApiListResponseBody body;
+    public RunDocWashingResponseBody body;
 
-    public static DescribeApiListResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApiListResponse self = new DescribeApiListResponse();
+    public static RunDocWashingResponse build(java.util.Map<String, ?> map) throws Exception {
+        RunDocWashingResponse self = new RunDocWashingResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApiListResponse setHeaders(java.util.Map<String, String> headers) {
+    public RunDocWashingResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeApiListResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeApiListResponse setStatusCode(Integer statusCode) {
+    public RunDocWashingResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeApiListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeApiListResponse setBody(DescribeApiListResponseBody body) {
+    public RunDocWashingResponse setBody(RunDocWashingResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeApiListResponseBody getBody() {
+    public RunDocWashingResponseBody getBody() {
         return this.body;
     }
 
