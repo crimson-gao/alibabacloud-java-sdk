@@ -82,6 +82,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("SwitchEnable")
     public String switchEnable;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateApplicationRequestTags> tags;
+
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
         return TeaModel.build(map, self);
@@ -149,6 +152,44 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getSwitchEnable() {
         return this.switchEnable;
+    }
+
+    public CreateApplicationRequest setTags(java.util.List<CreateApplicationRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateApplicationRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class CreateApplicationRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateApplicationRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationRequestTags self = new CreateApplicationRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateApplicationRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

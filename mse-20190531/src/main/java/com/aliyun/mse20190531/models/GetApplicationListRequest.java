@@ -110,6 +110,9 @@ public class GetApplicationListRequest extends TeaModel {
     @NameInMap("SwitchEnable")
     public Boolean switchEnable;
 
+    @NameInMap("Tags")
+    public java.util.List<GetApplicationListRequestTags> tags;
+
     public static GetApplicationListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetApplicationListRequest self = new GetApplicationListRequest();
         return TeaModel.build(map, self);
@@ -201,6 +204,44 @@ public class GetApplicationListRequest extends TeaModel {
     }
     public Boolean getSwitchEnable() {
         return this.switchEnable;
+    }
+
+    public GetApplicationListRequest setTags(java.util.List<GetApplicationListRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetApplicationListRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class GetApplicationListRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetApplicationListRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationListRequestTags self = new GetApplicationListRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationListRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetApplicationListRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
