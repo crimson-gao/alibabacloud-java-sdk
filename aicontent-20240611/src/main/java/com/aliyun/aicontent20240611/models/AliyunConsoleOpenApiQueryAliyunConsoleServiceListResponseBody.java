@@ -9,7 +9,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
      * <p>[]</p>
      */
     @NameInMap("data")
-    public java.util.List<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData> data;
+    public java.util.List<AliyunConsoleServiceInfoDTO> data;
 
     /**
      * <strong>example:</strong>
@@ -51,11 +51,11 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         return TeaModel.build(map, self);
     }
 
-    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody setData(java.util.List<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData> data) {
+    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody setData(java.util.List<AliyunConsoleServiceInfoDTO> data) {
         this.data = data;
         return this;
     }
-    public java.util.List<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData> getData() {
+    public java.util.List<AliyunConsoleServiceInfoDTO> getData() {
         return this.data;
     }
 
@@ -97,74 +97,6 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        @NameInMap("FreeConcurrencyCount")
-        public Integer freeConcurrencyCount;
-
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
-        @NameInMap("FreeCount")
-        public Integer freeCount;
-
-        /**
-         * <strong>example:</strong>
-         * <p>online_ai_algorithm_personalized_text_to_image_call_count</p>
-         */
-        @NameInMap("ServiceCode")
-        public String serviceCode;
-
-        /**
-         * <strong>example:</strong>
-         * <p>AI算法模型-个性化文生图-在线按量调用</p>
-         */
-        @NameInMap("ServiceName")
-        public String serviceName;
-
-        public static AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData self = new AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData setFreeConcurrencyCount(Integer freeConcurrencyCount) {
-            this.freeConcurrencyCount = freeConcurrencyCount;
-            return this;
-        }
-        public Integer getFreeConcurrencyCount() {
-            return this.freeConcurrencyCount;
-        }
-
-        public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData setFreeCount(Integer freeCount) {
-            this.freeCount = freeCount;
-            return this;
-        }
-        public Integer getFreeCount() {
-            return this.freeCount;
-        }
-
-        public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData setServiceCode(String serviceCode) {
-            this.serviceCode = serviceCode;
-            return this;
-        }
-        public String getServiceCode() {
-            return this.serviceCode;
-        }
-
-        public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData setServiceName(String serviceName) {
-            this.serviceName = serviceName;
-            return this;
-        }
-        public String getServiceName() {
-            return this.serviceName;
-        }
-
     }
 
 }
