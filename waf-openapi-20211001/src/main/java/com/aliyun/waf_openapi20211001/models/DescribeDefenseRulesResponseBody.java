@@ -14,7 +14,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of protection rules.</p>
+     * <p>The protection rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<DescribeDefenseRulesResponseBodyRules> rules;
@@ -58,6 +58,9 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseRulesResponseBodyRules extends TeaModel {
+        @NameInMap("ActionExternal")
+        public String actionExternal;
+
         /**
          * <p>The details of the protection rule. The value is a string that contains multiple parameters in the JSON format. For more information, see the &quot;<strong>Rule parameters</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
          * 
@@ -81,13 +84,40 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         public String defenseOrigin;
 
         /**
-         * <p>The scenario in which the protection rule is used. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+         * <p>The protection module for which the protection rule is created. Valid values:</p>
+         * <ul>
+         * <li><strong>waf_group</strong>: the basic protection rule module.</li>
+         * <li><strong>waf_base_compliance</strong>: the protocol compliance feature of the basic protection rule module.</li>
+         * <li><strong>waf_base_sema</strong>: the semantic analysis feature of the basic protection rule module.</li>
+         * <li><strong>cc</strong>: the HTTP flood protection module.</li>
+         * <li><strong>antiscan_dirscan</strong>: the directory traversal blocking feature of the scan protection module.</li>
+         * <li><strong>antiscan_highfreq</strong>: the high-frequency scanning blocking feature of the scan protection module.</li>
+         * <li><strong>antiscan_scantools</strong>: the scanner blocking feature of the scan protection module.</li>
+         * <li><strong>ip_blacklist</strong>: the IP address blacklist module.</li>
+         * <li><strong>custom_acl</strong>: the custom rule module.</li>
+         * <li><strong>region_block</strong>: the region blacklist module.</li>
+         * <li><strong>tamperproof</strong>: the website tamper-proofing module.</li>
+         * <li><strong>dlp</strong>: the data leakage prevention module.</li>
+         * <li><strong>custom_response_block</strong>: the custom response module.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>waf_group</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("DetailRuleIds")
+        public String detailRuleIds;
+
+        @NameInMap("ExternalInfo")
+        public String externalInfo;
+
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
 
         /**
          * <p>The most recent time when the protection rule was modified.</p>
@@ -116,6 +146,9 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
+        @NameInMap("RuleType")
+        public String ruleType;
+
         /**
          * <p>The status of the protection rule. Valid values:</p>
          * <ul>
@@ -143,6 +176,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDefenseRulesResponseBodyRules setActionExternal(String actionExternal) {
+            this.actionExternal = actionExternal;
+            return this;
+        }
+        public String getActionExternal() {
+            return this.actionExternal;
+        }
+
         public DescribeDefenseRulesResponseBodyRules setConfig(String config) {
             this.config = config;
             return this;
@@ -167,6 +208,38 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             return this.defenseScene;
         }
 
+        public DescribeDefenseRulesResponseBodyRules setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeDefenseRulesResponseBodyRules setDetailRuleIds(String detailRuleIds) {
+            this.detailRuleIds = detailRuleIds;
+            return this;
+        }
+        public String getDetailRuleIds() {
+            return this.detailRuleIds;
+        }
+
+        public DescribeDefenseRulesResponseBodyRules setExternalInfo(String externalInfo) {
+            this.externalInfo = externalInfo;
+            return this;
+        }
+        public String getExternalInfo() {
+            return this.externalInfo;
+        }
+
+        public DescribeDefenseRulesResponseBodyRules setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
         public DescribeDefenseRulesResponseBodyRules setGmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
             return this;
@@ -189,6 +262,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public DescribeDefenseRulesResponseBodyRules setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
         }
 
         public DescribeDefenseRulesResponseBodyRules setStatus(Integer status) {
