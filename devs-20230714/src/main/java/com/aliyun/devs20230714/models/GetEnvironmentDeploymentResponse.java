@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.cr20181201.models;
+package com.aliyun.devs20230714.models;
 
 import com.aliyun.tea.*;
 
-public class GetRepoTagManifestResponse extends TeaModel {
+public class GetEnvironmentDeploymentResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetRepoTagManifestResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetRepoTagManifestResponseBody body;
+    public EnvironmentDeployment body;
 
-    public static GetRepoTagManifestResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetRepoTagManifestResponse self = new GetRepoTagManifestResponse();
+    public static GetEnvironmentDeploymentResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetEnvironmentDeploymentResponse self = new GetEnvironmentDeploymentResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetRepoTagManifestResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetEnvironmentDeploymentResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetRepoTagManifestResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetRepoTagManifestResponse setStatusCode(Integer statusCode) {
+    public GetEnvironmentDeploymentResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetRepoTagManifestResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetRepoTagManifestResponse setBody(GetRepoTagManifestResponseBody body) {
+    public GetEnvironmentDeploymentResponse setBody(EnvironmentDeployment body) {
         this.body = body;
         return this;
     }
-    public GetRepoTagManifestResponseBody getBody() {
+    public EnvironmentDeployment getBody() {
         return this.body;
     }
 

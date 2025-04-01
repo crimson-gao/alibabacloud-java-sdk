@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.cr20181201.models;
+package com.aliyun.eds_aic20230930.models;
 
 import com.aliyun.tea.*;
 
-public class GetRepoTagLayersResponse extends TeaModel {
+public class DeleteCloudPhoneNodesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetRepoTagLayersResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetRepoTagLayersResponseBody body;
+    public DeleteCloudPhoneNodesResponseBody body;
 
-    public static GetRepoTagLayersResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetRepoTagLayersResponse self = new GetRepoTagLayersResponse();
+    public static DeleteCloudPhoneNodesResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteCloudPhoneNodesResponse self = new DeleteCloudPhoneNodesResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetRepoTagLayersResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteCloudPhoneNodesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetRepoTagLayersResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetRepoTagLayersResponse setStatusCode(Integer statusCode) {
+    public DeleteCloudPhoneNodesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetRepoTagLayersResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetRepoTagLayersResponse setBody(GetRepoTagLayersResponseBody body) {
+    public DeleteCloudPhoneNodesResponse setBody(DeleteCloudPhoneNodesResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetRepoTagLayersResponseBody getBody() {
+    public DeleteCloudPhoneNodesResponseBody getBody() {
         return this.body;
     }
 
