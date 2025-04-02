@@ -73,6 +73,9 @@ public class DescribeTairKVCacheCustomInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PrivateIp")
+    public String privateIp;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -218,6 +221,14 @@ public class DescribeTairKVCacheCustomInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeTairKVCacheCustomInstancesRequest setPrivateIp(String privateIp) {
+        this.privateIp = privateIp;
+        return this;
+    }
+    public String getPrivateIp() {
+        return this.privateIp;
     }
 
     public DescribeTairKVCacheCustomInstancesRequest setRegionId(String regionId) {

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the application is deleted. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: The request was redirected.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +20,27 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the change order that is used to query the task execution status.</p>
+     * <p>The result returned.</p>
      */
     @NameInMap("Data")
     public DeleteApplicationResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request is successful.</li>
-     * <li><strong>3xx</strong>: A redirection message is returned.</li>
-     * <li><strong>4xx</strong>: The request is invalid.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> section of this topic.</li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The trace ID that is used to query details of the request.</p>
+     * <p>The message returned. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, <strong>success</strong> is returned.</li>
+     * <li>If the request failed, an error code is returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,11 +49,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned message.</p>
-     * <ul>
-     * <li>If the request is successful, <strong>success</strong> is returned.</li>
-     * <li>If an error occurred, the error code is returned.</li>
-     * </ul>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -58,6 +58,12 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the application is deleted. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The applications were deleted</li>
+     * <li><strong>false</strong>: The applications failed to be deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -65,7 +71,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -136,11 +142,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
 
     public static class DeleteApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The error code that is returned if the request fails.</p>
-         * <ul>
-         * <li>If the request is successful, this parameter is not returned.****</li>
-         * <li>This parameter is returned only if the request failed.**** For more information about the values of this parameter, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
-         * </ul>
+         * <p>The ID of the change order. The ID can be used to query the status of the change task.</p>
          * 
          * <strong>example:</strong>
          * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
