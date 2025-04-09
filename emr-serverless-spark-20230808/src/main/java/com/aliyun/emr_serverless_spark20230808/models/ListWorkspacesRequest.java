@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Fuzzy match is supported.</p>
+     * <p>The name of the workspace. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test_workspace</p>
@@ -23,7 +23,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,13 +41,16 @@ public class ListWorkspacesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The workspace status.</p>
+     * <p>The state of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>running</p>
      */
     @NameInMap("state")
     public String state;
+
+    @NameInMap("tag")
+    public java.util.List<ListWorkspacesRequestTag> tag;
 
     public static ListWorkspacesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWorkspacesRequest self = new ListWorkspacesRequest();
@@ -92,6 +95,44 @@ public class ListWorkspacesRequest extends TeaModel {
     }
     public String getState() {
         return this.state;
+    }
+
+    public ListWorkspacesRequest setTag(java.util.List<ListWorkspacesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListWorkspacesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListWorkspacesRequestTag extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListWorkspacesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListWorkspacesRequestTag self = new ListWorkspacesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWorkspacesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListWorkspacesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
