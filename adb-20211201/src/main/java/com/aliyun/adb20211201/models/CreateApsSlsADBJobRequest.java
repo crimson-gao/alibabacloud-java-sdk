@@ -234,7 +234,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String resourceGroup;
 
     /**
-     * <p>源集群所处地域ID。</p>
+     * <p>The region ID of the source cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -673,7 +673,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
          * <p>The format of the timestamp.</p>
          * 
          * <strong>example:</strong>
-         * <p> APSyyyyMMdd</p>
+         * <p>yyyyMMdd</p>
          */
         @NameInMap("Format")
         public String format;

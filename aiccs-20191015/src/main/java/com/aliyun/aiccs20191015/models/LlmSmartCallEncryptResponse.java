@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.adb20211201.models;
+package com.aliyun.aiccs20191015.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteProcessInstanceResponse extends TeaModel {
+public class LlmSmartCallEncryptResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteProcessInstanceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteProcessInstanceResponseBody body;
+    public LlmSmartCallEncryptResponseBody body;
 
-    public static DeleteProcessInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteProcessInstanceResponse self = new DeleteProcessInstanceResponse();
+    public static LlmSmartCallEncryptResponse build(java.util.Map<String, ?> map) throws Exception {
+        LlmSmartCallEncryptResponse self = new LlmSmartCallEncryptResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteProcessInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public LlmSmartCallEncryptResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteProcessInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteProcessInstanceResponse setStatusCode(Integer statusCode) {
+    public LlmSmartCallEncryptResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteProcessInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteProcessInstanceResponse setBody(DeleteProcessInstanceResponseBody body) {
+    public LlmSmartCallEncryptResponse setBody(LlmSmartCallEncryptResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteProcessInstanceResponseBody getBody() {
+    public LlmSmartCallEncryptResponseBody getBody() {
         return this.body;
     }
 
