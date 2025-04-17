@@ -16,6 +16,9 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("L7Config")
+    public PAL7Config l7Config;
+
     @NameInMap("L7ProxyDomainAutomaticPrefix")
     public String l7ProxyDomainAutomaticPrefix;
 
@@ -85,6 +88,14 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreatePrivateAccessApplicationRequest setL7Config(PAL7Config l7Config) {
+        this.l7Config = l7Config;
+        return this;
+    }
+    public PAL7Config getL7Config() {
+        return this.l7Config;
     }
 
     public CreatePrivateAccessApplicationRequest setL7ProxyDomainAutomaticPrefix(String l7ProxyDomainAutomaticPrefix) {

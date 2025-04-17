@@ -23,6 +23,9 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("L7Config")
+    public PAL7Config l7Config;
+
     @NameInMap("L7ProxyDomainAutomaticPrefix")
     public String l7ProxyDomainAutomaticPrefix;
 
@@ -30,6 +33,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String l7ProxyDomainCustom;
 
     @NameInMap("L7ProxyDomainPrivate")
+    @Deprecated
     public String l7ProxyDomainPrivate;
 
     /**
@@ -92,6 +96,14 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdatePrivateAccessApplicationRequest setL7Config(PAL7Config l7Config) {
+        this.l7Config = l7Config;
+        return this;
+    }
+    public PAL7Config getL7Config() {
+        return this.l7Config;
+    }
+
     public UpdatePrivateAccessApplicationRequest setL7ProxyDomainAutomaticPrefix(String l7ProxyDomainAutomaticPrefix) {
         this.l7ProxyDomainAutomaticPrefix = l7ProxyDomainAutomaticPrefix;
         return this;
@@ -108,6 +120,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.l7ProxyDomainCustom;
     }
 
+    @Deprecated
     public UpdatePrivateAccessApplicationRequest setL7ProxyDomainPrivate(String l7ProxyDomainPrivate) {
         this.l7ProxyDomainPrivate = l7ProxyDomainPrivate;
         return this;

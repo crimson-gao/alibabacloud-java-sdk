@@ -48,6 +48,9 @@ public class RemoveInstancesRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    @NameInMap("LifecycleHookContext")
+    public RemoveInstancesRequestLifecycleHookContext lifecycleHookContext;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -162,6 +165,14 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.instanceIds;
     }
 
+    public RemoveInstancesRequest setLifecycleHookContext(RemoveInstancesRequestLifecycleHookContext lifecycleHookContext) {
+        this.lifecycleHookContext = lifecycleHookContext;
+        return this;
+    }
+    public RemoveInstancesRequestLifecycleHookContext getLifecycleHookContext() {
+        return this.lifecycleHookContext;
+    }
+
     public RemoveInstancesRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -224,6 +235,36 @@ public class RemoveInstancesRequest extends TeaModel {
     }
     public Integer getStopInstanceTimeout() {
         return this.stopInstanceTimeout;
+    }
+
+    public static class RemoveInstancesRequestLifecycleHookContext extends TeaModel {
+        @NameInMap("DisableLifecycleHook")
+        public Boolean disableLifecycleHook;
+
+        @NameInMap("IgnoredLifecycleHookIds")
+        public java.util.List<String> ignoredLifecycleHookIds;
+
+        public static RemoveInstancesRequestLifecycleHookContext build(java.util.Map<String, ?> map) throws Exception {
+            RemoveInstancesRequestLifecycleHookContext self = new RemoveInstancesRequestLifecycleHookContext();
+            return TeaModel.build(map, self);
+        }
+
+        public RemoveInstancesRequestLifecycleHookContext setDisableLifecycleHook(Boolean disableLifecycleHook) {
+            this.disableLifecycleHook = disableLifecycleHook;
+            return this;
+        }
+        public Boolean getDisableLifecycleHook() {
+            return this.disableLifecycleHook;
+        }
+
+        public RemoveInstancesRequestLifecycleHookContext setIgnoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
+            this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
+            return this;
+        }
+        public java.util.List<String> getIgnoredLifecycleHookIds() {
+            return this.ignoredLifecycleHookIds;
+        }
+
     }
 
 }

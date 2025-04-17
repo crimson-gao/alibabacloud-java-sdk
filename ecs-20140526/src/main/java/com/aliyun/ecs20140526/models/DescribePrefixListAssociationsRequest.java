@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePrefixListAssociationsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Maximum value: 100.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
