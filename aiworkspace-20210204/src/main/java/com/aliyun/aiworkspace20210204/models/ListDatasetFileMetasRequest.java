@@ -23,6 +23,15 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String endFileUpdateTime;
 
     /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
+     */
+    @NameInMap("EndTagUpdateTime")
+    public String endTagUpdateTime;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
      * <strong>example:</strong>
      * <p>90a6ee35-****-4cd4-927e-1f45e1cb8b62_1729644433000</p>
      */
@@ -41,7 +50,29 @@ public class ListDatasetFileMetasRequest extends TeaModel {
      * <p>10</p>
      */
     @NameInMap("PageSize")
+    @Deprecated
     public Integer pageSize;
+
+    @NameInMap("QueryFileDir")
+    public String queryFileDir;
+
+    @NameInMap("QueryFileName")
+    public String queryFileName;
+
+    @NameInMap("QueryFileTypeIncludeAny")
+    public java.util.List<String> queryFileTypeIncludeAny;
+
+    @NameInMap("QueryImage")
+    public String queryImage;
+
+    @NameInMap("QueryTagsExclude")
+    public java.util.List<String> queryTagsExclude;
+
+    @NameInMap("QueryTagsIncludeAll")
+    public java.util.List<String> queryTagsIncludeAll;
+
+    @NameInMap("QueryTagsIncludeAny")
+    public java.util.List<String> queryTagsIncludeAny;
 
     @NameInMap("QueryText")
     public String queryText;
@@ -75,6 +106,15 @@ public class ListDatasetFileMetasRequest extends TeaModel {
      */
     @NameInMap("StartFileUpdateTime")
     public String startFileUpdateTime;
+
+    /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
+     */
+    @NameInMap("StartTagUpdateTime")
+    public String startTagUpdateTime;
+
+    @NameInMap("ThumbnailMode")
+    public String thumbnailMode;
 
     /**
      * <strong>example:</strong>
@@ -113,6 +153,22 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.endFileUpdateTime;
     }
 
+    public ListDatasetFileMetasRequest setEndTagUpdateTime(String endTagUpdateTime) {
+        this.endTagUpdateTime = endTagUpdateTime;
+        return this;
+    }
+    public String getEndTagUpdateTime() {
+        return this.endTagUpdateTime;
+    }
+
+    public ListDatasetFileMetasRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
     public ListDatasetFileMetasRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -129,12 +185,69 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.order;
     }
 
+    @Deprecated
     public ListDatasetFileMetasRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDatasetFileMetasRequest setQueryFileDir(String queryFileDir) {
+        this.queryFileDir = queryFileDir;
+        return this;
+    }
+    public String getQueryFileDir() {
+        return this.queryFileDir;
+    }
+
+    public ListDatasetFileMetasRequest setQueryFileName(String queryFileName) {
+        this.queryFileName = queryFileName;
+        return this;
+    }
+    public String getQueryFileName() {
+        return this.queryFileName;
+    }
+
+    public ListDatasetFileMetasRequest setQueryFileTypeIncludeAny(java.util.List<String> queryFileTypeIncludeAny) {
+        this.queryFileTypeIncludeAny = queryFileTypeIncludeAny;
+        return this;
+    }
+    public java.util.List<String> getQueryFileTypeIncludeAny() {
+        return this.queryFileTypeIncludeAny;
+    }
+
+    public ListDatasetFileMetasRequest setQueryImage(String queryImage) {
+        this.queryImage = queryImage;
+        return this;
+    }
+    public String getQueryImage() {
+        return this.queryImage;
+    }
+
+    public ListDatasetFileMetasRequest setQueryTagsExclude(java.util.List<String> queryTagsExclude) {
+        this.queryTagsExclude = queryTagsExclude;
+        return this;
+    }
+    public java.util.List<String> getQueryTagsExclude() {
+        return this.queryTagsExclude;
+    }
+
+    public ListDatasetFileMetasRequest setQueryTagsIncludeAll(java.util.List<String> queryTagsIncludeAll) {
+        this.queryTagsIncludeAll = queryTagsIncludeAll;
+        return this;
+    }
+    public java.util.List<String> getQueryTagsIncludeAll() {
+        return this.queryTagsIncludeAll;
+    }
+
+    public ListDatasetFileMetasRequest setQueryTagsIncludeAny(java.util.List<String> queryTagsIncludeAny) {
+        this.queryTagsIncludeAny = queryTagsIncludeAny;
+        return this;
+    }
+    public java.util.List<String> getQueryTagsIncludeAny() {
+        return this.queryTagsIncludeAny;
     }
 
     public ListDatasetFileMetasRequest setQueryText(String queryText) {
@@ -175,6 +288,22 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     }
     public String getStartFileUpdateTime() {
         return this.startFileUpdateTime;
+    }
+
+    public ListDatasetFileMetasRequest setStartTagUpdateTime(String startTagUpdateTime) {
+        this.startTagUpdateTime = startTagUpdateTime;
+        return this;
+    }
+    public String getStartTagUpdateTime() {
+        return this.startTagUpdateTime;
+    }
+
+    public ListDatasetFileMetasRequest setThumbnailMode(String thumbnailMode) {
+        this.thumbnailMode = thumbnailMode;
+        return this;
+    }
+    public String getThumbnailMode() {
+        return this.thumbnailMode;
     }
 
     public ListDatasetFileMetasRequest setTopK(Integer topK) {
