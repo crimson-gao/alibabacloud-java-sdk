@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.videorecog20200320.models;
+package com.aliyun.cloudauth20190307.models;
 
 import com.aliyun.tea.*;
 
-public class SplitVideoPartsResponse extends TeaModel {
+public class CredentialVerifyV2Response extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class SplitVideoPartsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public SplitVideoPartsResponseBody body;
+    public CredentialVerifyV2ResponseBody body;
 
-    public static SplitVideoPartsResponse build(java.util.Map<String, ?> map) throws Exception {
-        SplitVideoPartsResponse self = new SplitVideoPartsResponse();
+    public static CredentialVerifyV2Response build(java.util.Map<String, ?> map) throws Exception {
+        CredentialVerifyV2Response self = new CredentialVerifyV2Response();
         return TeaModel.build(map, self);
     }
 
-    public SplitVideoPartsResponse setHeaders(java.util.Map<String, String> headers) {
+    public CredentialVerifyV2Response setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class SplitVideoPartsResponse extends TeaModel {
         return this.headers;
     }
 
-    public SplitVideoPartsResponse setStatusCode(Integer statusCode) {
+    public CredentialVerifyV2Response setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class SplitVideoPartsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SplitVideoPartsResponse setBody(SplitVideoPartsResponseBody body) {
+    public CredentialVerifyV2Response setBody(CredentialVerifyV2ResponseBody body) {
         this.body = body;
         return this;
     }
-    public SplitVideoPartsResponseBody getBody() {
+    public CredentialVerifyV2ResponseBody getBody() {
         return this.body;
     }
 
