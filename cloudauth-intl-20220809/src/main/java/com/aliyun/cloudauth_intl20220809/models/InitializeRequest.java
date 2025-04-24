@@ -25,6 +25,15 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("Crop")
     public String crop;
 
+    @NameInMap("DateOfBirth")
+    public String dateOfBirth;
+
+    @NameInMap("DateOfExpiry")
+    public String dateOfExpiry;
+
+    @NameInMap("DocPageConfig")
+    public java.util.List<String> docPageConfig;
+
     @NameInMap("DocScanMode")
     public String docScanMode;
 
@@ -37,6 +46,9 @@ public class InitializeRequest extends TeaModel {
 
     @NameInMap("DocVideo")
     public String docVideo;
+
+    @NameInMap("DocumentNumber")
+    public String documentNumber;
 
     @NameInMap("ExperienceCode")
     public String experienceCode;
@@ -72,6 +84,9 @@ public class InitializeRequest extends TeaModel {
 
     @NameInMap("LanguageConfig")
     public String languageConfig;
+
+    @NameInMap("MRTDInput")
+    public String MRTDInput;
 
     /**
      * <strong>example:</strong>
@@ -150,6 +165,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("StyleConfig")
     public String styleConfig;
 
+    @NameInMap("UseNFC")
+    public String useNFC;
+
     public static InitializeRequest build(java.util.Map<String, ?> map) throws Exception {
         InitializeRequest self = new InitializeRequest();
         return TeaModel.build(map, self);
@@ -195,6 +213,30 @@ public class InitializeRequest extends TeaModel {
         return this.crop;
     }
 
+    public InitializeRequest setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        return this;
+    }
+    public String getDateOfBirth() {
+        return this.dateOfBirth;
+    }
+
+    public InitializeRequest setDateOfExpiry(String dateOfExpiry) {
+        this.dateOfExpiry = dateOfExpiry;
+        return this;
+    }
+    public String getDateOfExpiry() {
+        return this.dateOfExpiry;
+    }
+
+    public InitializeRequest setDocPageConfig(java.util.List<String> docPageConfig) {
+        this.docPageConfig = docPageConfig;
+        return this;
+    }
+    public java.util.List<String> getDocPageConfig() {
+        return this.docPageConfig;
+    }
+
     public InitializeRequest setDocScanMode(String docScanMode) {
         this.docScanMode = docScanMode;
         return this;
@@ -217,6 +259,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getDocVideo() {
         return this.docVideo;
+    }
+
+    public InitializeRequest setDocumentNumber(String documentNumber) {
+        this.documentNumber = documentNumber;
+        return this;
+    }
+    public String getDocumentNumber() {
+        return this.documentNumber;
     }
 
     public InitializeRequest setExperienceCode(String experienceCode) {
@@ -273,6 +323,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getLanguageConfig() {
         return this.languageConfig;
+    }
+
+    public InitializeRequest setMRTDInput(String MRTDInput) {
+        this.MRTDInput = MRTDInput;
+        return this;
+    }
+    public String getMRTDInput() {
+        return this.MRTDInput;
     }
 
     public InitializeRequest setMerchantBizId(String merchantBizId) {
@@ -393,6 +451,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getStyleConfig() {
         return this.styleConfig;
+    }
+
+    public InitializeRequest setUseNFC(String useNFC) {
+        this.useNFC = useNFC;
+        return this;
+    }
+    public String getUseNFC() {
+        return this.useNFC;
     }
 
 }

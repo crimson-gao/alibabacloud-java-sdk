@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelsRequest extends TeaModel {
     /**
+     * <p>The collection where the model is located. You can specify multiple collections and separate them with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>AI4D,QuickStart</p>
      */
@@ -12,6 +14,8 @@ public class ListModelsRequest extends TeaModel {
     public String collections;
 
     /**
+     * <p>The domain. Only models in the domain are returned. Valid values: nlp (Natural Language Processing) and cv (Computer Vision).</p>
+     * 
      * <strong>example:</strong>
      * <p>nlp</p>
      */
@@ -19,16 +23,23 @@ public class ListModelsRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The label. Models whose label key or label value contains a specific label are filtered.</p>
+     * 
      * <strong>example:</strong>
      * <p>key1</p>
      */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <p>The model name used to filter the returned models.</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
+     * <p>The model type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Endpoint</p>
      */
@@ -36,6 +47,12 @@ public class ListModelsRequest extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC.</p>
+     * <ul>
+     * <li>ASC</li>
+     * <li>DESC</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -43,6 +60,8 @@ public class ListModelsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The model source used to filter the models that belong to a community or organization, such as ModelScope and Hugging Face.</p>
+     * 
      * <strong>example:</strong>
      * <p>ModelScope</p>
      */
@@ -50,6 +69,8 @@ public class ListModelsRequest extends TeaModel {
     public String origin;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -57,6 +78,8 @@ public class ListModelsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,6 +87,8 @@ public class ListModelsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The provider. If you configure this parameter, only the models exposed by the provider are returned. If you leave this parameter empty, only models owned by the user are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>pai</p>
      */
@@ -71,6 +96,8 @@ public class ListModelsRequest extends TeaModel {
     public String provider;
 
     /**
+     * <p>The query condition. For example, if you set the value to nlp, all models that match ModelName, Domain, Task, LabelKey, and LabelValue are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>nlp</p>
      */
@@ -78,13 +105,20 @@ public class ListModelsRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The field used to sort the results. The GmtCreateTime field is used for sorting.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("Tag")
+    public java.util.List<ListModelsRequestTag> tag;
+
     /**
+     * <p>The task used to filter the models that belong to the task type. Example: text-classification.</p>
+     * 
      * <strong>example:</strong>
      * <p>text-classification</p>
      */
@@ -92,6 +126,8 @@ public class ListModelsRequest extends TeaModel {
     public String task;
 
     /**
+     * <p>The workspace ID. Only models in this workspace are queried. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>324**</p>
      */
@@ -199,6 +235,14 @@ public class ListModelsRequest extends TeaModel {
         return this.sortBy;
     }
 
+    public ListModelsRequest setTag(java.util.List<ListModelsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListModelsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListModelsRequest setTask(String task) {
         this.task = task;
         return this;
@@ -213,6 +257,36 @@ public class ListModelsRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class ListModelsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListModelsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListModelsRequestTag self = new ListModelsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListModelsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListModelsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
