@@ -725,6 +725,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("ProductForm")
+        public String productForm;
+
         /**
          * <p>The edition of the cluster. Valid values:</p>
          * <ul>
@@ -756,6 +759,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ReservedNodeCount")
+        public Integer reservedNodeCount;
+
+        @NameInMap("ReservedNodeSize")
+        public String reservedNodeSize;
+
         /**
          * <p>The resource group ID.</p>
          * 
@@ -764,6 +773,30 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        /**
+         * <p>The ID of the secondary vSwitch.</p>
+         * <blockquote>
+         * <p> You cannot set this parameter to a value that is the same as that of the VSwitchId parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-0jlb72a9dan1ja9cvg9tf</p>
+         */
+        @NameInMap("SecondaryVSwitchId")
+        public String secondaryVSwitchId;
+
+        /**
+         * <p>The ID of the secondary zone.</p>
+         * <blockquote>
+         * <p> You cannot set this parameter to a value that is the same as that of the ZoneId parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou-b</p>
+         */
+        @NameInMap("SecondaryZoneId")
+        public String secondaryZoneId;
 
         /**
          * <p>The specifications of storage resources that are used in the cluster in elastic mode. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</p>
@@ -1128,6 +1161,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.port;
         }
 
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setProductForm(String productForm) {
+            this.productForm = productForm;
+            return this;
+        }
+        public String getProductForm() {
+            return this.productForm;
+        }
+
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setProductVersion(String productVersion) {
             this.productVersion = productVersion;
             return this;
@@ -1152,12 +1193,44 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setReservedNodeCount(Integer reservedNodeCount) {
+            this.reservedNodeCount = reservedNodeCount;
+            return this;
+        }
+        public Integer getReservedNodeCount() {
+            return this.reservedNodeCount;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setReservedNodeSize(String reservedNodeSize) {
+            this.reservedNodeSize = reservedNodeSize;
+            return this;
+        }
+        public String getReservedNodeSize() {
+            return this.reservedNodeSize;
+        }
+
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setSecondaryVSwitchId(String secondaryVSwitchId) {
+            this.secondaryVSwitchId = secondaryVSwitchId;
+            return this;
+        }
+        public String getSecondaryVSwitchId() {
+            return this.secondaryVSwitchId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setSecondaryZoneId(String secondaryZoneId) {
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setStorageResource(String storageResource) {
