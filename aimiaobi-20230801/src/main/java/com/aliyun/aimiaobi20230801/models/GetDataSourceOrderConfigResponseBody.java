@@ -103,6 +103,9 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        @NameInMap("Enable")
+        public Boolean enable;
+
         @NameInMap("Name")
         public String name;
 
@@ -133,6 +136,14 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
             return this.code;
         }
 
+        public GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
         public GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList setName(String name) {
             this.name = name;
             return this;
@@ -160,12 +171,27 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceOrderConfigResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TotalDocSize")
+        public Integer totalDocSize;
+
         @NameInMap("UserConfigDataSourceList")
         public java.util.List<GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList> userConfigDataSourceList;
 
         public static GetDataSourceOrderConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDataSourceOrderConfigResponseBodyData self = new GetDataSourceOrderConfigResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetDataSourceOrderConfigResponseBodyData setTotalDocSize(Integer totalDocSize) {
+            this.totalDocSize = totalDocSize;
+            return this;
+        }
+        public Integer getTotalDocSize() {
+            return this.totalDocSize;
         }
 
         public GetDataSourceOrderConfigResponseBodyData setUserConfigDataSourceList(java.util.List<GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList> userConfigDataSourceList) {
