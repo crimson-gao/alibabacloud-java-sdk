@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.dataworks_public20240518.models;
+package com.aliyun.cloudfw20171207.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDeploymentResponse extends TeaModel {
+public class DescribeLogStoreInfoResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateDeploymentResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateDeploymentResponseBody body;
+    public DescribeLogStoreInfoResponseBody body;
 
-    public static CreateDeploymentResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateDeploymentResponse self = new CreateDeploymentResponse();
+    public static DescribeLogStoreInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeLogStoreInfoResponse self = new DescribeLogStoreInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDeploymentResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeLogStoreInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateDeploymentResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateDeploymentResponse setStatusCode(Integer statusCode) {
+    public DescribeLogStoreInfoResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateDeploymentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateDeploymentResponse setBody(CreateDeploymentResponseBody body) {
+    public DescribeLogStoreInfoResponse setBody(DescribeLogStoreInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateDeploymentResponseBody getBody() {
+    public DescribeLogStoreInfoResponseBody getBody() {
         return this.body;
     }
 

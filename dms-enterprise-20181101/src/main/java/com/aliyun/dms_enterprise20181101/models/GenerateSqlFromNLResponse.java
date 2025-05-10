@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.dataworks_public20240518.models;
+package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class AbolishDeploymentResponse extends TeaModel {
+public class GenerateSqlFromNLResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AbolishDeploymentResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AbolishDeploymentResponseBody body;
+    public GenerateSqlFromNLResponseBody body;
 
-    public static AbolishDeploymentResponse build(java.util.Map<String, ?> map) throws Exception {
-        AbolishDeploymentResponse self = new AbolishDeploymentResponse();
+    public static GenerateSqlFromNLResponse build(java.util.Map<String, ?> map) throws Exception {
+        GenerateSqlFromNLResponse self = new GenerateSqlFromNLResponse();
         return TeaModel.build(map, self);
     }
 
-    public AbolishDeploymentResponse setHeaders(java.util.Map<String, String> headers) {
+    public GenerateSqlFromNLResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AbolishDeploymentResponse extends TeaModel {
         return this.headers;
     }
 
-    public AbolishDeploymentResponse setStatusCode(Integer statusCode) {
+    public GenerateSqlFromNLResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AbolishDeploymentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AbolishDeploymentResponse setBody(AbolishDeploymentResponseBody body) {
+    public GenerateSqlFromNLResponse setBody(GenerateSqlFromNLResponseBody body) {
         this.body = body;
         return this;
     }
-    public AbolishDeploymentResponseBody getBody() {
+    public GenerateSqlFromNLResponseBody getBody() {
         return this.body;
     }
 
