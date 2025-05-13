@@ -1,9 +1,9 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.oos20190601.models;
+package com.aliyun.aimiaobi20230801.models;
 
 import com.aliyun.tea.*;
 
-public class ListGitRepositoriesResponse extends TeaModel {
+public class RunWritingV2Response extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListGitRepositoriesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListGitRepositoriesResponseBody body;
+    public RunWritingV2ResponseBody body;
 
-    public static ListGitRepositoriesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListGitRepositoriesResponse self = new ListGitRepositoriesResponse();
+    public static RunWritingV2Response build(java.util.Map<String, ?> map) throws Exception {
+        RunWritingV2Response self = new RunWritingV2Response();
         return TeaModel.build(map, self);
     }
 
-    public ListGitRepositoriesResponse setHeaders(java.util.Map<String, String> headers) {
+    public RunWritingV2Response setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListGitRepositoriesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListGitRepositoriesResponse setStatusCode(Integer statusCode) {
+    public RunWritingV2Response setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListGitRepositoriesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListGitRepositoriesResponse setBody(ListGitRepositoriesResponseBody body) {
+    public RunWritingV2Response setBody(RunWritingV2ResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListGitRepositoriesResponseBody getBody() {
+    public RunWritingV2ResponseBody getBody() {
         return this.body;
     }
 
