@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkflowRequest extends TeaModel {
     /**
-     * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
      * 
      * <strong>example:</strong>
      * <p>testSchedulerx.defaultGroup</p>
