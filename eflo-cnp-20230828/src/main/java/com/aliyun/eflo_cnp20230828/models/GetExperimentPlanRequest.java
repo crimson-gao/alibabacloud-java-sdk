@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class GetExperimentPlanRequest extends TeaModel {
     /**
      * <p>Plan ID</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>189</p>

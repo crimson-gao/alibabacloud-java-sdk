@@ -96,6 +96,9 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
     }
 
     public static class InsertInterveneRuleResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         /**
          * <strong>example:</strong>
          * <p>12345</p>
@@ -106,6 +109,14 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
         public static InsertInterveneRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             InsertInterveneRuleResponseBodyData self = new InsertInterveneRuleResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public InsertInterveneRuleResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public InsertInterveneRuleResponseBodyData setRuleId(Long ruleId) {

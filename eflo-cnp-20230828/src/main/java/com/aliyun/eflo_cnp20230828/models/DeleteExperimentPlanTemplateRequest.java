@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteExperimentPlanTemplateRequest extends TeaModel {
     /**
+     * <p>Template ID</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>346527</p>
      */

@@ -528,6 +528,48 @@ public class GetExperimentPlanResponseBody extends TeaModel {
 
     }
 
+    public static class GetExperimentPlanResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:testLXP:test-quota40-19</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000088aabb0019e4</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetExperimentPlanResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            GetExperimentPlanResponseBodyDataTags self = new GetExperimentPlanResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetExperimentPlanResponseBodyDataTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetExperimentPlanResponseBodyDataTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetExperimentPlanResponseBodyData extends TeaModel {
         /**
          * <p>Creation time</p>
@@ -570,6 +612,12 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          */
         @NameInMap("ResourceId")
         public Long resourceId;
+
+        /**
+         * <p>The tag.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<GetExperimentPlanResponseBodyDataTags> tags;
 
         /**
          * <p>Associated test plan template ID</p>
@@ -641,6 +689,14 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
         public Long getResourceId() {
             return this.resourceId;
+        }
+
+        public GetExperimentPlanResponseBodyData setTags(java.util.List<GetExperimentPlanResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetExperimentPlanResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public GetExperimentPlanResponseBodyData setTemplateId(Long templateId) {

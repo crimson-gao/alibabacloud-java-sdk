@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateExperimentPlanTemplateRequest extends TeaModel {
     /**
+     * <p>Privacy Level</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>private</p>
      */
@@ -12,6 +15,8 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
     public String privacyLevel;
 
     /**
+     * <p>Template Description</p>
+     * 
      * <strong>example:</strong>
      * <p>The template installs jdk and tomcat on a new ECS instance.</p>
      */
@@ -19,15 +24,28 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
     public String templateDescription;
 
     /**
+     * <p>Template ID</p>
+     * 
      * <strong>example:</strong>
      * <p>4724</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
+    /**
+     * <p>Template Name</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>Template Pipeline</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplatePipeline")
     public java.util.List<CreateExperimentPlanTemplateRequestTemplatePipeline> templatePipeline;
 
@@ -78,6 +96,9 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
 
     public static class CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams extends TeaModel {
         /**
+         * <p>CPU allocation count</p>
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -85,7 +106,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Integer cpuPerWorker;
 
         /**
-         * <p>cudaVersion</p>
+         * <p>CUDA Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -94,7 +115,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public String cudaVersion;
 
         /**
-         * <p>GpuDriverVersion</p>
+         * <p>GPU Driver Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -103,6 +124,9 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public String gpuDriverVersion;
 
         /**
+         * <p>GPU allocation count</p>
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -110,6 +134,9 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Integer gpuPerWorker;
 
         /**
+         * <p>Memory (GB) allocation count</p>
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -117,7 +144,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Integer memoryPerWorker;
 
         /**
-         * <p>NCCLVersion</p>
+         * <p>NCCL Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -126,7 +153,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public String NCCLVersion;
 
         /**
-         * <p>PyTorchVersion</p>
+         * <p>PyTorch Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -135,6 +162,9 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public String pyTorchVersion;
 
         /**
+         * <p>Shared Memory (GB) allocation count</p>
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -142,6 +172,9 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Integer shareMemory;
 
         /**
+         * <p>Number of nodes</p>
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -228,10 +261,17 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
     }
 
     public static class CreateExperimentPlanTemplateRequestTemplatePipeline extends TeaModel {
+        /**
+         * <p>Configured Environment Parameters</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("EnvParams")
         public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams envParams;
 
         /**
+         * <p>Node Order Number</p>
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -239,16 +279,25 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Integer pipelineOrder;
 
         /**
+         * <p>Usage Scenario, e.g., &quot;baseline&quot;</p>
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>baseline</p>
          */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>Configured Workload Parameters</p>
+         */
         @NameInMap("SettingParams")
         public java.util.Map<String, String> settingParams;
 
         /**
+         * <p>Workload ID</p>
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>14</p>
          */
@@ -256,6 +305,9 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Long workloadId;
 
         /**
+         * <p>Workload Name</p>
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
