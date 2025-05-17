@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
@@ -14,10 +14,10 @@ public class UpdateClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result. Valid values:</p>
+     * <p>Request result, possible values: </p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: request succeeded </li>
+     * <li>false: request failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
