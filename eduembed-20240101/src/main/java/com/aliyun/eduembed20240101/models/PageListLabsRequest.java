@@ -7,9 +7,17 @@ public class PageListLabsRequest extends TeaModel {
     @NameInMap("Id")
     public java.util.List<Long> id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

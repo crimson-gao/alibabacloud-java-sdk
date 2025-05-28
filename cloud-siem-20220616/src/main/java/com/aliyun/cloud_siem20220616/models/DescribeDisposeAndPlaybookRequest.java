@@ -28,6 +28,13 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     public String entityType;
 
     /**
+     * <strong>example:</strong>
+     * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
+     */
+    @NameInMap("EntityUuid")
+    public String entityUuid;
+
+    /**
      * <p>The UUID of the event.</p>
      * 
      * <strong>example:</strong>
@@ -99,6 +106,14 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     }
     public String getEntityType() {
         return this.entityType;
+    }
+
+    public DescribeDisposeAndPlaybookRequest setEntityUuid(String entityUuid) {
+        this.entityUuid = entityUuid;
+        return this;
+    }
+    public String getEntityUuid() {
+        return this.entityUuid;
     }
 
     public DescribeDisposeAndPlaybookRequest setIncidentUuid(String incidentUuid) {
