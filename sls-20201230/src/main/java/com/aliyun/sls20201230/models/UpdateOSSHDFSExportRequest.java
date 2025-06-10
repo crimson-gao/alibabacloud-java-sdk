@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateOSSHDFSExportRequest extends TeaModel {
     /**
      * <p>The configuration details of the job.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public OSSExportConfiguration configuration;
@@ -18,6 +19,7 @@ public class UpdateOSSHDFSExportRequest extends TeaModel {
 
     /**
      * <p>The display name of the job.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ali-test-oss-hdfs-job</p>

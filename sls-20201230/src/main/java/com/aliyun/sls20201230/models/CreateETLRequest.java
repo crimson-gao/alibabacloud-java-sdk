@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateETLRequest extends TeaModel {
     /**
+     * <p>The detailed configuration of the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public ETLConfiguration configuration;
 
     /**
+     * <p>The description of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is ETL</p>
      */
@@ -18,6 +21,7 @@ public class CreateETLRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,7 @@ public class CreateETLRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The name of the job (unique within a project).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

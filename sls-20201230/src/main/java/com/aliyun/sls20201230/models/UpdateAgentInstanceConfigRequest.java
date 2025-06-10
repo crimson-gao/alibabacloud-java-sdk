@@ -4,24 +4,29 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateAgentInstanceConfigRequest extends TeaModel {
+    @NameInMap("attributes")
+    public java.util.Map<String, String> attributes;
+
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("config")
     public String config;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
-    @NameInMap("configMatcher")
-    public String configMatcher;
-
-    @NameInMap("isGray")
-    public Boolean isGray;
+    @NameInMap("grayConfigs")
+    public java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs;
 
     public static UpdateAgentInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAgentInstanceConfigRequest self = new UpdateAgentInstanceConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAgentInstanceConfigRequest setAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
     }
 
     public UpdateAgentInstanceConfigRequest setConfig(String config) {
@@ -32,20 +37,12 @@ public class UpdateAgentInstanceConfigRequest extends TeaModel {
         return this.config;
     }
 
-    public UpdateAgentInstanceConfigRequest setConfigMatcher(String configMatcher) {
-        this.configMatcher = configMatcher;
+    public UpdateAgentInstanceConfigRequest setGrayConfigs(java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs) {
+        this.grayConfigs = grayConfigs;
         return this;
     }
-    public String getConfigMatcher() {
-        return this.configMatcher;
-    }
-
-    public UpdateAgentInstanceConfigRequest setIsGray(Boolean isGray) {
-        this.isGray = isGray;
-        return this;
-    }
-    public Boolean getIsGray() {
-        return this.isGray;
+    public java.util.List<AgentInstanceConfigGrayConfigs> getGrayConfigs() {
+        return this.grayConfigs;
     }
 
 }

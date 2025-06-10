@@ -99,6 +99,13 @@ public class OSSIngestionConfigurationSource extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("tagPackId")
+    public Boolean tagPackId;
+
+    /**
+     * <strong>example:</strong>
      * <p><strong>time</strong></p>
      */
     @NameInMap("timeField")
@@ -233,6 +240,14 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public OSSIngestionConfigurationSource setTagPackId(Boolean tagPackId) {
+        this.tagPackId = tagPackId;
+        return this;
+    }
+    public Boolean getTagPackId() {
+        return this.tagPackId;
     }
 
     public OSSIngestionConfigurationSource setTimeField(String timeField) {
