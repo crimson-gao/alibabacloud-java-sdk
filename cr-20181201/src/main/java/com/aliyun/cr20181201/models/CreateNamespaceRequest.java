@@ -13,17 +13,21 @@ public class CreateNamespaceRequest extends TeaModel {
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
+    @NameInMap("DefaultRepoConfiguration")
+    public RepoConfiguration defaultRepoConfiguration;
+
     /**
-     * <p>The default type of the repository that is automatically created. Valid values:</p>
+     * <p>The default type of the repositories that are automatically created in the namespace. Valid values:</p>
      * <ul>
-     * <li><code>PUBLIC</code>: a public repository</li>
-     * <li><code>PRIVATE</code>: a private repository</li>
+     * <li><code>PUBLIC</code>: public repositories</li>
+     * <li><code>PRIVATE</code>: private repositories.</li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
      */
     @NameInMap("DefaultRepoType")
+    @Deprecated
     public String defaultRepoType;
 
     /**
@@ -59,6 +63,15 @@ public class CreateNamespaceRequest extends TeaModel {
         return this.autoCreateRepo;
     }
 
+    public CreateNamespaceRequest setDefaultRepoConfiguration(RepoConfiguration defaultRepoConfiguration) {
+        this.defaultRepoConfiguration = defaultRepoConfiguration;
+        return this;
+    }
+    public RepoConfiguration getDefaultRepoConfiguration() {
+        return this.defaultRepoConfiguration;
+    }
+
+    @Deprecated
     public CreateNamespaceRequest setDefaultRepoType(String defaultRepoType) {
         this.defaultRepoType = defaultRepoType;
         return this;

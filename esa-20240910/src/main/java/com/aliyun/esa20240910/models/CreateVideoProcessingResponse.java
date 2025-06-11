@@ -1,27 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.imageprocess20200320.models;
+package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class ClassifyFNFResponse extends TeaModel {
+public class CreateVideoProcessingResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public ClassifyFNFResponseBody body;
+    public CreateVideoProcessingResponseBody body;
 
-    public static ClassifyFNFResponse build(java.util.Map<String, ?> map) throws Exception {
-        ClassifyFNFResponse self = new ClassifyFNFResponse();
+    public static CreateVideoProcessingResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateVideoProcessingResponse self = new CreateVideoProcessingResponse();
         return TeaModel.build(map, self);
     }
 
-    public ClassifyFNFResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateVideoProcessingResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class ClassifyFNFResponse extends TeaModel {
         return this.headers;
     }
 
-    public ClassifyFNFResponse setStatusCode(Integer statusCode) {
+    public CreateVideoProcessingResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class ClassifyFNFResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ClassifyFNFResponse setBody(ClassifyFNFResponseBody body) {
+    public CreateVideoProcessingResponse setBody(CreateVideoProcessingResponseBody body) {
         this.body = body;
         return this;
     }
-    public ClassifyFNFResponseBody getBody() {
+    public CreateVideoProcessingResponseBody getBody() {
         return this.body;
     }
 
