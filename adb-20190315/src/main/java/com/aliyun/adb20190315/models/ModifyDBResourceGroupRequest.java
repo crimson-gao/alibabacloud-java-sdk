@@ -13,6 +13,12 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ClusterMode")
+    public String clusterMode;
+
+    @NameInMap("ClusterSizeResource")
+    public String clusterSizeResource;
+
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      * <blockquote>
@@ -25,6 +31,9 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    @NameInMap("EngineParams")
+    public java.util.Map<String, ?> engineParams;
 
     /**
      * <p>The name of the resource group.</p>
@@ -51,6 +60,18 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
      */
     @NameInMap("GroupType")
     public String groupType;
+
+    @NameInMap("MaxClusterCount")
+    public Integer maxClusterCount;
+
+    @NameInMap("MaxComputeResource")
+    public String maxComputeResource;
+
+    @NameInMap("MinClusterCount")
+    public Integer minClusterCount;
+
+    @NameInMap("MinComputeResource")
+    public String minComputeResource;
 
     /**
      * <p>The number of nodes. Default value: 0.</p>
@@ -96,12 +117,36 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public ModifyDBResourceGroupRequest setClusterMode(String clusterMode) {
+        this.clusterMode = clusterMode;
+        return this;
+    }
+    public String getClusterMode() {
+        return this.clusterMode;
+    }
+
+    public ModifyDBResourceGroupRequest setClusterSizeResource(String clusterSizeResource) {
+        this.clusterSizeResource = clusterSizeResource;
+        return this;
+    }
+    public String getClusterSizeResource() {
+        return this.clusterSizeResource;
+    }
+
     public ModifyDBResourceGroupRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ModifyDBResourceGroupRequest setEngineParams(java.util.Map<String, ?> engineParams) {
+        this.engineParams = engineParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getEngineParams() {
+        return this.engineParams;
     }
 
     public ModifyDBResourceGroupRequest setGroupName(String groupName) {
@@ -118,6 +163,38 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     }
     public String getGroupType() {
         return this.groupType;
+    }
+
+    public ModifyDBResourceGroupRequest setMaxClusterCount(Integer maxClusterCount) {
+        this.maxClusterCount = maxClusterCount;
+        return this;
+    }
+    public Integer getMaxClusterCount() {
+        return this.maxClusterCount;
+    }
+
+    public ModifyDBResourceGroupRequest setMaxComputeResource(String maxComputeResource) {
+        this.maxComputeResource = maxComputeResource;
+        return this;
+    }
+    public String getMaxComputeResource() {
+        return this.maxComputeResource;
+    }
+
+    public ModifyDBResourceGroupRequest setMinClusterCount(Integer minClusterCount) {
+        this.minClusterCount = minClusterCount;
+        return this;
+    }
+    public Integer getMinClusterCount() {
+        return this.minClusterCount;
+    }
+
+    public ModifyDBResourceGroupRequest setMinComputeResource(String minComputeResource) {
+        this.minComputeResource = minComputeResource;
+        return this;
+    }
+    public String getMinComputeResource() {
+        return this.minComputeResource;
     }
 
     public ModifyDBResourceGroupRequest setNodeNum(Integer nodeNum) {
