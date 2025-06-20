@@ -25,6 +25,9 @@ public class Catalog extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("type")
+    public String type;
+
     @NameInMap("updatedAt")
     public Long updatedAt;
 
@@ -90,6 +93,14 @@ public class Catalog extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public Catalog setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public Catalog setUpdatedAt(Long updatedAt) {
