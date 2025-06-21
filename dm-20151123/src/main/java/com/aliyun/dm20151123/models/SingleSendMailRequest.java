@@ -26,6 +26,9 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("AddressType")
     public Integer addressType;
 
+    @NameInMap("Attachments")
+    public java.util.List<SingleSendMailRequestAttachments> attachments;
+
     /**
      * <p>1: Enable data tracking function</p>
      * <p>0 (default): Disable data tracking function.</p>
@@ -197,6 +200,14 @@ public class SingleSendMailRequest extends TeaModel {
         return this.addressType;
     }
 
+    public SingleSendMailRequest setAttachments(java.util.List<SingleSendMailRequestAttachments> attachments) {
+        this.attachments = attachments;
+        return this;
+    }
+    public java.util.List<SingleSendMailRequestAttachments> getAttachments() {
+        return this.attachments;
+    }
+
     public SingleSendMailRequest setClickTrace(String clickTrace) {
         this.clickTrace = clickTrace;
         return this;
@@ -331,6 +342,36 @@ public class SingleSendMailRequest extends TeaModel {
     }
     public String getUnSubscribeLinkType() {
         return this.unSubscribeLinkType;
+    }
+
+    public static class SingleSendMailRequestAttachments extends TeaModel {
+        @NameInMap("AttachmentName")
+        public String attachmentName;
+
+        @NameInMap("AttachmentUrl")
+        public String attachmentUrl;
+
+        public static SingleSendMailRequestAttachments build(java.util.Map<String, ?> map) throws Exception {
+            SingleSendMailRequestAttachments self = new SingleSendMailRequestAttachments();
+            return TeaModel.build(map, self);
+        }
+
+        public SingleSendMailRequestAttachments setAttachmentName(String attachmentName) {
+            this.attachmentName = attachmentName;
+            return this;
+        }
+        public String getAttachmentName() {
+            return this.attachmentName;
+        }
+
+        public SingleSendMailRequestAttachments setAttachmentUrl(String attachmentUrl) {
+            this.attachmentUrl = attachmentUrl;
+            return this;
+        }
+        public String getAttachmentUrl() {
+            return this.attachmentUrl;
+        }
+
     }
 
 }
